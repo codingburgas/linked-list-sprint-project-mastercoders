@@ -2,10 +2,14 @@
 //
 
 #include <iostream>
-
+#include "list.h"
 int main()
 {
-    std::cout << "Hello World!\n";
+	List<int> ll;
+	for (int i = 1; i <= 10; i++)
+		ll.InsertBack(i);
+	ll.Print();
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
