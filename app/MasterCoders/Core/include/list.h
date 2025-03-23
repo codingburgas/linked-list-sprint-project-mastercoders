@@ -3,6 +3,7 @@
 template<class T>
 class List
 {
+protected:
 	struct Node
 	{
 		T data;
@@ -14,16 +15,19 @@ class List
 		}
 	};
 	Node* head;
-	Node* last;
+	Node* lastBack;
+	Node* lastFront;
 	int count;
 public:
-	List() : head(nullptr), last(nullptr),count(0)
+	List() : head(nullptr), lastBack(nullptr), lastFront(nullptr),count(0)
 	{
 
 	}
 	void Print();
-	void InsertFront(const T& node);
-	void InsertBack(const T& node);	
+	void PrintBack(int mode);
+	void InsertFront(const T& data);
+	void InsertBack(const T& data);
+	void InsertPos(Node* ppos,Node* node);
 };
 class ListEvent : public List<EventData>
 {
@@ -32,15 +36,12 @@ public:
 	{
 
 	}
-	void InsertFront(const EventData& data)
-	{
-		List<EventData>::InsertFront(data);
-	}
-	void InsertBack(const EventData& data)
-	{
-		List<EventData>::InsertBack(data);
-	}
+	void InsertFront(const EventData& data);	
+	void InsertBack(const EventData& data);	
+	void InsertDate(const EventData& data);
+	void PrintEvent();
 };
+
 template <class T>
 void List<T>::InsertFront(const T& data)
 {
@@ -48,13 +49,16 @@ void List<T>::InsertFront(const T& data)
 	{
 		head = new Node;
 		head->data = data;
+		lastFront = head;
 	}
 	else
 	{
 		Node* add = new Node;
 		add->data = data;
 		add->next = head;
+		head->prev = add;
 		head = add;
+		lastFront = head;
 	}
 	count++;
 }
@@ -65,17 +69,37 @@ void List<T>::InsertBack(const T& data)
 	{
 		head = new Node;
 		head->data = data;
-		last = head;
+		lastBack = head;
 	}
 	else
 	{
 		Node* add = new Node;
 		add->data = data;
-		add->prev = last;
-		last->next = add;
-		last = add;
+		add->prev = lastBack;
+		lastBack->next = add;
+		lastBack = add;
 	}
 	count++;
+}
+template<class T>
+void List<T>::InsertPos(Node* ppos, Node* node)
+{
+	if (!ppos)
+	{
+		return;
+	}
+	node->next = ppos->next;
+	if (ppos->next)
+	{
+		ppos->next->prev = node;
+	}
+	ppos->next = node;
+	node->prev = ppos;
+
+	if (node->next == nullptr)
+	{
+		lastBack = node;
+	}
 }
 template <class T>
 void List<T>::Print()
@@ -85,5 +109,15 @@ void List<T>::Print()
 	{
 		std::cout << t->data << ' ';
 		t = t->next;
+	}
+};
+template <class T>
+void List<T>::PrintBack(int mode) /////////// fix to work with event
+{
+	Node* t = mode == 1 ? lastFront : lastBack;
+	while (t)
+	{
+		std::cout << t->data << ' ';
+		t = mode == 1 ? t->next : t->prev;
 	}
 };
