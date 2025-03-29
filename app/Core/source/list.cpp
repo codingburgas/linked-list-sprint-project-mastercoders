@@ -86,7 +86,7 @@ List<std::string> &ListEvent::NameList() const
 List<EventData>& ListEvent::EventList(std::string topic) const
 {
 	List<EventData> events;
-	if (!head) return events;
+	if (!head || topic.empty()) return events;
 		
 	Node* thead = head;	
 	while (thead)
