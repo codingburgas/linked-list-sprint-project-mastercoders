@@ -145,3 +145,25 @@ bool List<T>::DelBack()
 	delete del;
 	return true;
 }
+template<class T>
+bool List<T>::DelPos(int pos)
+{
+	if (pos <= 0 || pos > count) return false;
+
+	Node* thead = head;
+	Node* t = nullptr;
+	for (int i = 0; thead && i < pos - 1; i++)
+	{
+		t = thead;
+		thead = thead->next;
+	}
+
+	Node* del = thead;
+	t->next = thead->next;
+
+	if (thead->next)
+		thead->next->prev = t;
+	if (del)
+		delete del;
+	return true;
+}
