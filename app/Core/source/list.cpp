@@ -7,6 +7,7 @@ bool ListEvent::InsertDate(const EventData& data)
 	if (!head)
 	{
 		List<EventData>::InsertBack(data);
+		return true;
 	}
 	else
 	{
