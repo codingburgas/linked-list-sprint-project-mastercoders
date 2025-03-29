@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "find.h"
-#pragma warning(disable : 4996)
+
 namespace Find
 {
 	bool FindUser(const User& data)
