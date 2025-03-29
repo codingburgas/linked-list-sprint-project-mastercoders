@@ -18,9 +18,7 @@ bool ListEvent::InsertDate(const EventData& data)
 			ppos = ppos->next;
 		}
 		
-		Node* add = new Node;
-		add->data = data;
-		if(List<EventData>::InsertPos(t, add)) return true;
+		if(List<EventData>::InsertPos(t, data)) return true;
 	}
 	return false;
 }
