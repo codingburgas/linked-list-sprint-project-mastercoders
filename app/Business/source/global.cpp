@@ -8,8 +8,8 @@ namespace Global
 		if (!events)
 		{
 			events = std::make_shared<ListEvent>();
-			return true;
 		}
+		if (events) return true;
 		return false;
 	}
 	bool Release()
