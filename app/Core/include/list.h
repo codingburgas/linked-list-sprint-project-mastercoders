@@ -68,27 +68,7 @@ public:
 	List<std::string>& NameList() const;
 	// returns list with all events' data with the same topic
 	List<EventData>& EventList(std::string topic) const;
-}; 
-template<class T>
-bool List<T>::DelAll()
-{
-	if (!head) return false;
-	Node* thead = head;
-
-	while (thead)
-	{
-		Node* del = thead;
-		thead = thead->next;
-		if (del)
-		{
-			delete del;
-			del = nullptr;
-		}
-	}
-
-	tail = nullptr;
-	return true;
-}
+};
 template <class T>
 void List<T>::InsertFront(const T& data)
 {
@@ -227,5 +207,25 @@ bool List<T>::DelPos(int pos)
 		del = nullptr;
 	}
 	count--;
+	return true;
+}
+template<class T>
+bool List<T>::DelAll()
+{
+	if (!head) return false;
+	Node* thead = head;
+
+	while (thead)
+	{
+		Node* del = thead;
+		thead = thead->next;
+		if (del)
+		{
+			delete del;
+			del = nullptr;
+		}
+	}
+
+	tail = nullptr;
 	return true;
 }
