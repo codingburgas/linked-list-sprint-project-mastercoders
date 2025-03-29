@@ -30,9 +30,9 @@ public:
 	bool DelFront();
 	bool DelBack();
 
-	int Size() { return count; }
-	const T& Get(int pos);
-	const T& operator[](int pos)
+	const int Size() const { return count; }
+	const T& Get (int pos) const;
+	const T& operator[](int pos) const
 	{
 		return Get(pos);
 	}
@@ -91,10 +91,7 @@ bool List<T>::InsertPos(Node* p, const T& data)
 
 	if (!head)
 	{
-		if (node)
-			InsertBack(data);
-		if (node)
-			delete node;
+		InsertBack(data);
 		return true;
 	}
 	Node* add = new Node;
@@ -113,7 +110,7 @@ bool List<T>::InsertPos(Node* p, const T& data)
 	return true;
 }
 template<class T>
-const T& List<T>::Get(int pos)
+const T& List<T>::Get(int pos) const
 {
 	if (pos <= 0 || pos > count) return T();
 
