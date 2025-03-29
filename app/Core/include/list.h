@@ -26,6 +26,7 @@ public:
 	void InsertBack(const T& data);
 	void InsertPos(Node* ppos,Node* node);
 	int Size() { return count; }
+	const T& Get(int pos);
 };
 class ListEvent : public List<EventData>
 {
@@ -93,4 +94,16 @@ void List<T>::InsertPos(Node* p, Node* node)
 	if (!p->next)
 		tail = node;
 	count++;
+}
+template<class T>
+const T& List<T>::Get(int pos)
+{
+	if (pos <= 0 || pos > count) return T();
+
+	Node* thead = head;
+	for (int i = 0; i < pos - 1 && thead; i++)
+	{
+		thead = thead->next;
+	}
+	return thead->data;
 }
