@@ -1,5 +1,6 @@
 #pragma once
 
+// user data
 struct User
 {
 	std::string username;
