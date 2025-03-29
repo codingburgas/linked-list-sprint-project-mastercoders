@@ -61,11 +61,6 @@ List<T>::~List()
 			del = nullptr;
 		}
 	}
-	if (head)
-	{
-		delete head;
-		head = nullptr;
-	}
 	tail = nullptr;
 }
 template <class T>
