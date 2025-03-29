@@ -18,12 +18,10 @@ protected:
 	Node* tail;
 	int count;
 public:
-	List() : head(nullptr), tail(nullptr)/*lastBack(nullptr), lastFront(nullptr), */,count(0)
+	List() : head(nullptr), tail(nullptr),count(0)
 	{
 
 	}
-	/*void Print();
-	void PrintBack(int mode);*/
 	void InsertFront(const T& data);
 	void InsertBack(const T& data);
 	void InsertPos(Node* ppos,Node* node);
@@ -35,8 +33,6 @@ public:
 	{
 
 	}
-	void InsertFront(const EventData& data);	
-	void InsertBack(const EventData& data);	
 	void InsertDate(const EventData& data);
 	void PrintEvent();
 };
@@ -91,44 +87,3 @@ void List<T>::InsertPos(Node* p, Node* node)
 	if (!p->next)
 		tail = node;
 }
-//template<class T>
-//void List<T>::InsertPos(Node* ppos, Node* node)
-//{
-//	if (!ppos)
-//	{
-//		return;
-//	}
-//	node->next = ppos->next;
-//	if (ppos->next)
-//	{
-//		ppos->next->prev = node;
-//	}
-//	ppos->next = node;
-//	node->prev = ppos;
-//
-//	if (node->next == nullptr)
-//	{
-//		lastBack = node;
-//	}
-//}
-// 
-//template <class T>
-//void List<T>::Print()
-//{
-//	Node* t = head;
-//	while (t)
-//	{
-//		std::cout << t->data << ' ';
-//		t = t->next;
-//	}
-//};
-//template <class T>
-//void List<T>::PrintBack(int mode) /////////// fix to work with event
-//{
-//	Node* t = mode == 1 ? lastFront : lastBack;
-//	while (t)
-//	{
-//		std::cout << t->data << ' ';
-//		t = mode == 1 ? t->next : t->prev;
-//	}
-//};
