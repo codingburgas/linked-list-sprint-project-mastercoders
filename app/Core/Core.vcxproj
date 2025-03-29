@@ -28,8 +28,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\core.h" />
-    <ClInclude Include="include\event.h" />
     <ClInclude Include="include\list.h" />
+    <ClInclude Include="include\models\event.h" />
     <ClInclude Include="include\pch\pch.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -133,7 +133,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\Core\include;..\Core\include\pch;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Core\include;..\Core\include\pch;..\Core\include\models;</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>

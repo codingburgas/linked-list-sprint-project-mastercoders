@@ -35,10 +35,10 @@
     <ClInclude Include="include\list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\event.h">
+    <ClInclude Include="include\pch\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\pch\pch.h">
+    <ClInclude Include="include\models\event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
