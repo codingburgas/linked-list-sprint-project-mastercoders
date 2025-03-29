@@ -126,12 +126,12 @@ bool List<T>::InsertPos(Node* ppos, const T& data)
 	add->next = ppos->next;
 	if (ppos->next)
 		ppos->next->prev = add;
-	ppos->next = add;
 
 	if (!ppos->next)
 		tail = add;
-	count++;
+	ppos->next = add;
 
+	count++;
 	return true;
 }
 template<class T>
