@@ -23,16 +23,25 @@ public:
 
 	}
 	~List();
+	// insert at first pos
 	void InsertFront(const T& data);
+	// insert at last pos
 	void InsertBack(const T& data);
+	// insert by a given node
 	bool InsertPos(Node* ppos,const T& data);
 
+	// delete at a certain pos, starting at one
 	bool DelPos(int pos);
+	// delete at first pos
 	bool DelFront();
+	// delete at last pos
 	bool DelBack();
 
+	// return current size
 	const int& Size() const { return count; }
+	// get data at certain pos
 	const T& Get (int pos) const;
+	// same as get
 	const T& operator[](int pos) const
 	{
 		return Get(pos);
@@ -41,12 +50,18 @@ public:
 class ListEvent : public List<EventData>
 {
 public:
+	// insert event by year
 	bool InsertDate(const EventData& data);
+	// print all events: name,topic,year
 	void PrintEvent() const;
+	// replace event data at certain pos
 	bool ReplaceEvent(int pos, const EventData& data) const;
+	// search an event by year and topic, return true if found
 	bool SearchData(int year, std::string topic) const;
 
+	// returns a list with all events' names
 	List<std::string>& NameList() const;
+	// returns list with all events' data with the same topic
 	List<EventData>& EventList(std::string topic) const;
 };
 
