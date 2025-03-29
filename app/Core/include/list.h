@@ -79,7 +79,7 @@ template<class T>
 void List<T>::InsertPos(Node* p, Node* node)
 {
 	if (!p) return;
-	if (!head || p == head)
+	if (!head)
 	{
 		InsertBack(node.data)
 		if (node)
