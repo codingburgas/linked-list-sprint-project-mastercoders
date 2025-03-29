@@ -30,6 +30,12 @@
     <ClInclude Include="include\error.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\business.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\valid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\global.cpp">
@@ -42,6 +48,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\register.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\business.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\valid.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -4,8 +4,14 @@
 #include "valid.h"
 namespace Register
 {
-	int RegisterAccount(const User& data)
+	int RegisterAccount()
 	{
+		User data;
+		std::cout << "Enter Username: \n";
+		std::cin >> data.username;
+		std::cout << "Enter Password: \n";
+		std::cin >> data.password;
+
 		if (Find::FindUser(data)) return Error::ERROR_EXISTS;
 		if (!Validation::IsValidAccount(data)) return Error::ERROR_INPUT;
 		// create account
