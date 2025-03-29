@@ -5,6 +5,7 @@ namespace Error
 	{
 		ERROR_EXISTS,
 		ERROR_INPUT,
+		ERROR_STREAM,
 		SUCCESSFUL
 	};
 }
