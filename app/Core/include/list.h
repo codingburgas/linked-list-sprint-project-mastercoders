@@ -22,6 +22,7 @@ public:
 	{
 
 	}
+	~List();
 	void InsertFront(const T& data);
 	void InsertBack(const T& data);
 	bool InsertPos(Node* ppos,const T& data);
@@ -30,7 +31,7 @@ public:
 	bool DelFront();
 	bool DelBack();
 
-	const int Size() const { return count; }
+	const int& Size() const { return count; }
 	const T& Get (int pos) const;
 	const T& operator[](int pos) const
 	{
@@ -46,6 +47,27 @@ public:
 	bool SearchData(int year, std::string topic) const;
 };
 
+template<class T>
+List<T>::~List()
+{
+	Node* thead = head;
+	while (thead)
+	{
+		Node* del = thead;
+		thead = thead->next;
+		if (del)
+		{
+			delete del;
+			del = nullptr;
+		}
+	}
+	if (head)
+	{
+		delete head;
+		head = nullptr;
+	}
+	tail = nullptr;
+}
 template <class T>
 void List<T>::InsertFront(const T& data)
 {
