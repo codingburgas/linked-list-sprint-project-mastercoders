@@ -41,9 +41,9 @@ class ListEvent : public List<EventData>
 {
 public:
 	bool InsertDate(const EventData& data);
-	void PrintEvent();
-	bool ReplaceEvent(int pos, const EventData& data);
-	bool SearchData(int year, std::string topic);
+	void PrintEvent() const;
+	bool ReplaceEvent(int pos, const EventData& data) const;
+	bool SearchData(int year, std::string topic) const;
 };
 
 template <class T>

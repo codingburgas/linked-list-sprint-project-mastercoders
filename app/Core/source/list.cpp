@@ -22,7 +22,7 @@ bool ListEvent::InsertDate(const EventData& data)
 	}
 	return false;
 }
-bool ListEvent::ReplaceEvent(int pos, const EventData& data)
+bool ListEvent::ReplaceEvent(int pos, const EventData& data) const
 {
 	if (pos <= 0 || pos > count) return false;
 	
@@ -37,7 +37,7 @@ bool ListEvent::ReplaceEvent(int pos, const EventData& data)
 	thead->data = data;
 	return true;
 }
-bool ListEvent::SearchData(int year, std::string topic)
+bool ListEvent::SearchData(int year, std::string topic) const
 {
 	if (!head) return false;
 
@@ -51,7 +51,7 @@ bool ListEvent::SearchData(int year, std::string topic)
 	if (thead->data.year == year && thead->data.topic == topic) return true;
 	return false;
 }
-void ListEvent::PrintEvent()
+void ListEvent::PrintEvent() const
 {
 	Node* thead = head;
 	while (thead)
