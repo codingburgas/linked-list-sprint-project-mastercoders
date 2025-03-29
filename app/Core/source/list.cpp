@@ -78,3 +78,17 @@ List<std::string> &ListEvent::NameList() const
 	}
 	return names;		
 }
+List<EventData>& ListEvent::EventList(std::string topic) const
+{
+	List<EventData> events;
+	if (!head) return events;
+		
+	Node* thead = head;	
+	while (thead)
+	{
+		if (thead->data.topic == topic)
+			events.InsertBack(thead->data);
+		thead = thead->next;
+	}
+	return events;
+}
