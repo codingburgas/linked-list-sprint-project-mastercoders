@@ -126,11 +126,16 @@ bool List<T>::DelFront()
 	if (!head) return false;
 	Node* del = head; // node to delete
 
+	if (!head->next && head == tail) tail = nullptr;
+
 	head = head->next;
 	head->prev = nullptr;
 	
-	if(del)
-	delete del;
+	if (del)
+	{
+		delete del;
+		del = nullptr;
+	}
 	return true;
 }
 template<class T>
@@ -142,7 +147,11 @@ bool List<T>::DelBack()
 	del->prev->next = nullptr;
 	tail = del->prev; // assign tail to be the node before tail
 
-	delete del;
+	if (del)
+	{
+		delete del;
+		del = nullptr;
+	}
 	return true;
 }
 template<class T>
@@ -164,9 +173,12 @@ bool List<T>::DelPos(int pos)
 	if (thead->next)
 		thead->next->prev = t;
 	else
-		if (thead == tail) tail = t; /// thead is last node, no next after it, reassign tail
+		if (del == tail) tail = t; /// thead is last node, no next after it, reassign tail
 
 	if (del)
+	{
 		delete del;
+		del = nullptr;
+	}
 	return true;
 }
