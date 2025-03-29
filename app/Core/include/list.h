@@ -22,7 +22,10 @@ public:
 	{
 
 	}
-	~List();
+	~List()
+	{
+		DelAll();
+	}
 	// insert at first pos
 	void InsertFront(const T& data);
 	// insert at last pos
@@ -66,11 +69,6 @@ public:
 	// returns list with all events' data with the same topic
 	List<EventData>& EventList(std::string topic) const;
 }; 
-template<class T>
-List<T>::~List()
-{
-	DelAll();
-}
 template<class T>
 bool List<T>::DelAll()
 {
