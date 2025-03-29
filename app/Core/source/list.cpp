@@ -39,6 +39,20 @@ bool ListEvent::ReplaceEvent(int pos, const EventData& data)
 	thead->data = data;
 	return true;
 }
+bool ListEvent::SearchData(int year, std::string topic)
+{
+	if (!head) return false;
+
+	Node* thead = head;
+	while (thead && thead->data.year != year && thead->data.topic != topic)
+	{
+		thead = thead->next;
+	}
+
+	if (!thead) return false;
+	if (thead->data.year == year && thead->data.topic == topic) return true;
+	return false;
+}
 void ListEvent::PrintEvent()
 {
 	Node* thead = head;

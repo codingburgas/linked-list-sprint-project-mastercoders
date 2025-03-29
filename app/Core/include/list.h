@@ -39,6 +39,7 @@ public:
 	bool InsertDate(const EventData& data);
 	void PrintEvent();
 	bool ReplaceEvent(int pos, const EventData& data);
+	bool SearchData(int year, std::string topic);
 };
 
 template <class T>
