@@ -3,5 +3,5 @@
 namespace Register
 {
 	// register a user: name,pass
-	int RegisterAccount(User data);
+	int RegisterAccount(const User& data);
 }
