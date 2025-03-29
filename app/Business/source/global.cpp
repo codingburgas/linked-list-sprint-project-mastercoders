@@ -17,8 +17,8 @@ namespace Global
 		if (events)
 		{
 			events.reset();
-			return true;
 		}
+		if (!events) return true;
 		return false;
 	}
 	std::shared_ptr<ListEvent>& GetEvents()
