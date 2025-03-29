@@ -10,15 +10,15 @@ bool ListEvent::InsertDate(const EventData& data)
 	}
 	else
 	{
-		Node* ppos = head;
-		Node* t = nullptr;
-		while (ppos&& ppos->data.year < data.year)
+		Node* thead = head;
+		Node* ppos = nullptr;
+		while (thead&& thead->data.year < data.year)
 		{
-			t = ppos;
-			ppos = ppos->next;
+			ppos = thead;
+			thead = thead->next;
 		}
 		
-		if(List<EventData>::InsertPos(t, data)) return true;
+		if(List<EventData>::InsertPos(ppos, data)) return true;
 	}
 	return false;
 }
