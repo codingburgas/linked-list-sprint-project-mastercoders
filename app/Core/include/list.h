@@ -25,6 +25,7 @@ public:
 	void InsertFront(const T& data);
 	void InsertBack(const T& data);
 	void InsertPos(Node* ppos,Node* node);
+	int Size() { return count; }
 };
 class ListEvent : public List<EventData>
 {
@@ -85,6 +86,7 @@ void List<T>::InsertPos(Node* p, Node* node)
 			InsertBack(node.data)
 		if (node)
 			delete node;
+		return;
 	}
 	node->prev = p;
 	node->next = p->next;
