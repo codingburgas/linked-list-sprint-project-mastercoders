@@ -1,2 +1,5 @@
-﻿  list.cpp
-  Core.vcxproj -> C:\Users\User\Pictures\projects\linked-list-sprint-project-mastercoders\app\MasterCoders\x64\Release\Core.lib
+﻿  pch.cpp
+  core.cpp
+  event.cpp
+  list.cpp
+  Core.vcxproj -> C:\Users\User\Pictures\projects\linked-list-sprint-project-mastercoders\app\x64\Release\Core.lib
