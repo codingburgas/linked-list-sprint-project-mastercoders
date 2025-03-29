@@ -3,6 +3,9 @@
 
 namespace Global
 {
+	// global events list
+	static std::shared_ptr<ListEvent> events;
+
 	bool Init()
 	{
 		if (!events)
