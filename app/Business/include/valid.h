@@ -7,5 +7,5 @@ namespace Validation
 	// return if pass contains nums,special chars, upper letters and no forbidden chars
 	bool IsValidPass(const std::string& pass);
 	// returns whether username and pass are valid
-	bool IsValidAccount(const User& acc);
+	bool IsValidUser(const User& acc);
 }

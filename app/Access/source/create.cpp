@@ -3,9 +3,10 @@
 
 namespace Create
 {
-	int CreateAccount(const User& data)
+	int CreateUser(const User& data)
 	{
-		std::ofstream handle("Data/Users/user" + data.username + ".txt");
+		std::ofstream handle(std::filesystem::current_path().string() + "\\Data\\Users\\user" + data.username + ".txt"); // dir isn't correct
+
 		if (!handle.is_open())
 			return Error::ERROR_STREAM;
 

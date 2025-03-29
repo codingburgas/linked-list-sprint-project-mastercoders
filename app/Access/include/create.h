@@ -2,5 +2,6 @@
 
 namespace Create
 {
-	int CreateAccount(const User& data);
+	// create user .txt file
+	int CreateUser(const User& data);
 }

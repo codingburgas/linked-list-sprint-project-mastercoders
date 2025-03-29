@@ -2,7 +2,7 @@
 #include "valid.h"
 namespace Validation
 {
-	bool IsValidAccount(const User& acc)
+	bool IsValidUser(const User& acc)
 	{
 		return IsValidUsername(acc.username) && IsValidPass(acc.password);
 	}
