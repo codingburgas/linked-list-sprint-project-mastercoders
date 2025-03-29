@@ -19,14 +19,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\error.h" />
+    <ClInclude Include="include\find.h" />
     <ClInclude Include="include\global.h" />
     <ClInclude Include="include\pch\pch.h" />
+    <ClInclude Include="include\register.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\find.cpp" />
     <ClCompile Include="source\global.cpp" />
     <ClCompile Include="source\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="source\register.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -128,7 +133,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\Core\include;..\Business\include;..\Business\include\pch;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Core\include\models;..\Core\include;..\Business\include;..\Business\include\pch;</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>

@@ -2,10 +2,13 @@
 //
 
 #include <iostream>
+#include <vector>
 #include "list.h"
+#include "user.h"
+#include "find.h"
 int main()
 {
-	ListEvent le;
+	/*ListEvent le;
 	EventData data[3];
 	data[0].name = "event1";
 	data[1].name = "event2";
@@ -24,7 +27,8 @@ int main()
 	for(int i = 0; i < 3;i++)
 	le.InsertDate(data[i]);
 
-	le.PrintEvent();
+	le.PrintEvent();*/
+	std::cout << Find::FindUser({ "Hello","Pass" });
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
