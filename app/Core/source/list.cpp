@@ -6,9 +6,7 @@ void ListEvent::InsertDate(const EventData& data)
 	if (data.year < 0) return;
 	if (!head)
 	{
-		head = new Node;
-		head->data = data;
-		count++;
+		List<EventData>::InsertBack(data);
 	}
 	else
 	{
