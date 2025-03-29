@@ -3,7 +3,7 @@
 struct Other
 {
 	std::string leader;
-	std::string* participants;
+	std::vector<std::string> participants;
 	std::string result;
 };
 struct EventData

@@ -45,6 +45,7 @@ public:
 	void PrintEvent() const;
 	bool ReplaceEvent(int pos, const EventData& data) const;
 	bool SearchData(int year, std::string topic) const;
+	List<std::string>& NameList() const;
 };
 
 template<class T>

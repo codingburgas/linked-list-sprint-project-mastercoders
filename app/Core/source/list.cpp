@@ -65,3 +65,16 @@ void ListEvent::PrintEvent() const
 		thead = thead->next;
 	}
 }
+List<std::string> &ListEvent::NameList() const
+{
+	List <std::string> names;
+	if (!head) return names;
+
+	Node* thead = head;
+	while (thead)
+	{
+		names.InsertBack(thead->data.name);
+		thead = thead->next;
+	}
+	return names;		
+}
