@@ -11,14 +11,27 @@ void ListEvent::InsertBack(const EventData& data)
 }
 void ListEvent::InsertDate(const EventData& data)
 {
-	Node* node = new Node;
-	node->data = data;
-	
-	Node* ppos = head;
-	while (ppos->data.year < data.year)
-		ppos = ppos->next;
-
-	List<EventData>::InsertPos(ppos, node);
+	if (data.year < 0) return;
+	if (!head)
+	{
+		head = new Node;
+		head->data = data;
+	}
+	else
+	{
+		Node* ppos = head;
+		Node* t = nullptr;
+		while (ppos&& ppos->data.year < data.year)
+		{
+			t = ppos;
+			ppos = ppos->next;
+		}
+		
+		Node* add = new Node;
+		add->data = data;
+		List<EventData>::InsertPos(t, add);
+	}
+	count++;
 }
 //void ListEvent::InsertDate(const EventData& data)
 //{

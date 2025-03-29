@@ -18,7 +18,7 @@ protected:
 	Node* tail;
 	int count;
 public:
-	List() : head(nullptr), tail(nullptr)/*lastBack(nullptr), lastFront(nullptr), */count(0)
+	List() : head(nullptr), tail(nullptr)/*lastBack(nullptr), lastFront(nullptr), */,count(0)
 	{
 
 	}
@@ -66,6 +66,7 @@ void List<T>::InsertBack(const T& data)
 	{
 		head = new Node;
 		head->data = data;
+		head->prev = head->next = nullptr;
 		tail = head;
 	}
 	else
@@ -79,9 +80,16 @@ void List<T>::InsertBack(const T& data)
 	count++;
 }
 template<class T>
-void List<T>::InsertPos(Node* ppos, Node* node)
+void List<T>::InsertPos(Node* p, Node* node)
 {
+	node->prev = p;
+	node->next = p->next;
+	if (p->next)
+		p->next->prev = node;
+	p->next = node;
 
+	if (!p->next)
+		tail = node;
 }
 //template<class T>
 //void List<T>::InsertPos(Node* ppos, Node* node)
