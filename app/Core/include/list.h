@@ -25,8 +25,13 @@ public:
 	void InsertFront(const T& data);
 	void InsertBack(const T& data);
 	void InsertPos(Node* ppos,Node* node);
+
 	int Size() { return count; }
 	const T& Get(int pos);
+	const T& operator[](int pos)
+	{
+		return Get(pos);
+	}
 };
 class ListEvent : public List<EventData>
 {
