@@ -78,6 +78,13 @@ void List<T>::InsertBack(const T& data)
 template<class T>
 void List<T>::InsertPos(Node* p, Node* node)
 {
+	if (!p) return;
+	if (!head || p == head)
+	{
+		InsertBack(node.data)
+		if (node)
+			delete node;
+	}
 	node->prev = p;
 	node->next = p->next;
 	if (p->next)
