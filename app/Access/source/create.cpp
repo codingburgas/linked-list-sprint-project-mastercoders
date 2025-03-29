@@ -11,6 +11,8 @@ namespace Create
 
 		handle << data.username << std::endl;
 		handle << data.password << std::endl;
+
+		handle.close();
 		return Error::SUCCESSFUL;
 	}
 }
