@@ -136,6 +136,7 @@ bool List<T>::DelFront()
 		delete del;
 		del = nullptr;
 	}
+	count--;
 	return true;
 }
 template<class T>
@@ -152,6 +153,7 @@ bool List<T>::DelBack()
 		delete del;
 		del = nullptr;
 	}
+	count--;
 	return true;
 }
 template<class T>
@@ -180,5 +182,6 @@ bool List<T>::DelPos(int pos)
 		delete del;
 		del = nullptr;
 	}
+	count--;
 	return true;
 }
