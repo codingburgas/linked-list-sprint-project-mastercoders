@@ -30,7 +30,7 @@ public:
 class ListEvent : public List<EventData>
 {
 public:
-	ListEvent() : List()
+	ListEvent()
 	{
 
 	}
