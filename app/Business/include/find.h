@@ -3,5 +3,5 @@
 namespace Find
 {
 	// returns whether a user exits or no 
-	bool FindUser(User data);
+	bool FindUser(const User& data);
 }
