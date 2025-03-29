@@ -30,10 +30,6 @@ public:
 class ListEvent : public List<EventData>
 {
 public:
-	ListEvent()
-	{
-
-	}
 	void InsertDate(const EventData& data);
 	void PrintEvent();
 };
