@@ -6,7 +6,7 @@ bool ListEvent::InsertDate(const EventData& data)
 	if (data.year < 0) return false;
 	if (!head)
 	{
-		List<EventData>::InsertBack(data);
+		InsertBack(data);
 		return true;
 	}
 	else
@@ -19,7 +19,7 @@ bool ListEvent::InsertDate(const EventData& data)
 			thead = thead->next;
 		}
 		
-		if(List<EventData>::InsertPos(ppos, data)) return true;
+		if(InsertPos(ppos, data)) return true;
 	}
 	return false;
 }
