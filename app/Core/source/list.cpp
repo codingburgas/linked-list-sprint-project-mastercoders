@@ -1,9 +1,9 @@
 #include "pch.h"
 #include "list.h"
 
-void ListEvent::InsertDate(const EventData& data)
+bool ListEvent::InsertDate(const EventData& data)
 {
-	if (data.year < 0) return;
+	if (data.year < 0) return false;
 	if (!head)
 	{
 		List<EventData>::InsertBack(data);
@@ -22,6 +22,22 @@ void ListEvent::InsertDate(const EventData& data)
 		add->data = data;
 		List<EventData>::InsertPos(t, add);
 	}
+	return true;
+}
+bool ListEvent::ReplaceEvent(int pos, const EventData& data)
+{
+	if (pos <= 0 || pos > count) return false;
+	
+	Node* thead = head;
+	for (int i = 0; thead && i < pos - 1; i++)
+	{
+		thead = thead->next;
+	}
+
+	if (!thead) return false;
+
+	thead->data = data;
+	return true;
 }
 void ListEvent::PrintEvent()
 {

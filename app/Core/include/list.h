@@ -36,8 +36,9 @@ public:
 class ListEvent : public List<EventData>
 {
 public:
-	void InsertDate(const EventData& data);
+	bool InsertDate(const EventData& data);
 	void PrintEvent();
+	bool ReplaceEvent(int pos, const EventData& data);
 };
 
 template <class T>
