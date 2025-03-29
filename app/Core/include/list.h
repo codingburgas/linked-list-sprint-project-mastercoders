@@ -110,9 +110,9 @@ void List<T>::InsertBack(const T& data)
 	count++;
 }
 template<class T>
-bool List<T>::InsertPos(Node* p, const T& data)
+bool List<T>::InsertPos(Node* ppos, const T& data)
 {
-	if (!p) return false;
+	if (!ppos) return false;
 
 	if (!head)
 	{
@@ -122,13 +122,13 @@ bool List<T>::InsertPos(Node* p, const T& data)
 	Node* add = new Node;
 	add->data = data;
 
-	add->prev = p;
-	add->next = p->next;
-	if (p->next)
-		p->next->prev = add;
-	p->next = add;
+	add->prev = ppos;
+	add->next = ppos->next;
+	if (ppos->next)
+		ppos->next->prev = add;
+	ppos->next = add;
 
-	if (!p->next)
+	if (!ppos->next)
 		tail = add;
 	count++;
 
