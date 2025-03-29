@@ -163,6 +163,9 @@ bool List<T>::DelPos(int pos)
 
 	if (thead->next)
 		thead->next->prev = t;
+	else
+		if (thead == tail) tail = t; /// thead is last node, no next after it, reassign tail
+
 	if (del)
 		delete del;
 	return true;
