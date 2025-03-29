@@ -24,7 +24,7 @@ public:
 	}
 	void InsertFront(const T& data);
 	void InsertBack(const T& data);
-	void InsertPos(Node* ppos,Node* node);
+	bool InsertPos(Node* ppos,Node* node);
 
 	int Size() { return count; }
 	const T& Get(int pos);
@@ -81,16 +81,16 @@ void List<T>::InsertBack(const T& data)
 	count++;
 }
 template<class T>
-void List<T>::InsertPos(Node* p, Node* node)
+bool List<T>::InsertPos(Node* p, Node* node)
 {
-	if (!p) return;
+	if (!p) return false;
 	if (!head)
 	{
 		if (node)
 			InsertBack(node->data);
 		if (node)
 			delete node;
-		return;
+		return true;
 	}
 	node->prev = p;
 	node->next = p->next;
@@ -101,6 +101,8 @@ void List<T>::InsertPos(Node* p, Node* node)
 	if (!p->next)
 		tail = node;
 	count++;
+
+	return true;
 }
 template<class T>
 const T& List<T>::Get(int pos)

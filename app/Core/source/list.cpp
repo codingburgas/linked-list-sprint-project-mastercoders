@@ -20,9 +20,9 @@ bool ListEvent::InsertDate(const EventData& data)
 		
 		Node* add = new Node;
 		add->data = data;
-		List<EventData>::InsertPos(t, add);
+		if(List<EventData>::InsertPos(t, add)) return true;
 	}
-	return true;
+	return false;
 }
 bool ListEvent::ReplaceEvent(int pos, const EventData& data)
 {
