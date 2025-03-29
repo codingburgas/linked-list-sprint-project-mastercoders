@@ -8,7 +8,7 @@ namespace Register
 	{
 		if (Find::FindUser(data)) return Error::ERROR_EXISTS;
 		if (!Validation::IsValidUser(data)) return Error::ERROR_INPUT;
-		// create account
-		return Error::SUCCESSFUL;
+		
+		return Create::CreateUser(data); // return crud operation result
 	}
 }

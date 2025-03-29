@@ -20,7 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\business.h" />
-    <ClInclude Include="include\error.h" />
     <ClInclude Include="include\find.h" />
     <ClInclude Include="include\global.h" />
     <ClInclude Include="include\pch\pch.h" />
