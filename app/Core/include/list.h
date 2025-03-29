@@ -60,7 +60,7 @@ public:
 	// insert event by year
 	bool InsertDate(const EventData& data);
 	// print all events: name,topic,year
-	void PrintEvent() const;
+	void PrintEvent(std::string topic = "") const;
 	// replace event data at certain pos
 	bool ReplaceEvent(int pos, const EventData& data) const;
 	// search an event by year and topic, return true if found

@@ -52,10 +52,12 @@ bool ListEvent::SearchData(int year, std::string topic) const
 	if (thead->data.year == year && thead->data.topic == topic) return true;
 	return false;
 }
-void ListEvent::PrintEvent() const
+void ListEvent::PrintEvent(std::string topic) const
 {
 	Node* thead = head;
-	while (thead)
+	bool condition = topic.empty() ? thead != nullptr : thead && thead->data.topic == topic;
+
+	while (condition)
 	{
 		EventData* currEvent = &thead->data;
 		std::cout << "Event name: " << currEvent->name << std::endl;
