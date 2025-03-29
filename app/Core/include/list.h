@@ -25,6 +25,9 @@ public:
 	void InsertFront(const T& data);
 	void InsertBack(const T& data);
 	bool InsertPos(Node* ppos,Node* node);
+	bool DelPos(int pos);
+	bool DelFront();
+	bool DelBack();
 
 	int Size() { return count; }
 	const T& Get(int pos);
@@ -115,4 +118,17 @@ const T& List<T>::Get(int pos)
 		thead = thead->next;
 	}
 	return thead->data;
+}
+template<class T>
+bool List<T>::DelFront()
+{
+	if (!head) return false;
+	Node* del = head; // node to delete
+
+	head = head->next;
+	head->prev = nullptr;
+	
+	if(del)
+	delete del;
+	return true;
 }
