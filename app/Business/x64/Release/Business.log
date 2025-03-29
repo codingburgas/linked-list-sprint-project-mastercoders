@@ -1,3 +1,8 @@
-﻿  valid.cpp
+﻿  pch.cpp
+  business.cpp
+  find.cpp
+  global.cpp
+  register.cpp
+  valid.cpp
   Replacing x64\Release\pch.obj
   Business.vcxproj -> C:\Users\User\Pictures\projects\linked-list-sprint-project-mastercoders\app\x64\Release\Business.lib

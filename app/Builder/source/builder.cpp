@@ -5,7 +5,10 @@
 #include <vector>
 #include "list.h"
 #include "user.h"
-#include "find.h"
+#include "register.h"
+#include "global.h"
+#include <fstream>
+#pragma warning(disable : 4996)
 int main()
 {
 	/*ListEvent le;
@@ -28,7 +31,10 @@ int main()
 	le.InsertDate(data[i]);
 
 	le.PrintEvent();*/
-	std::cout << Find::FindUser({ "Hello","Pass" });
+
+//	std::cout << Register::RegisterUser({ "Hello123456","Passssssss12345457" });
+	std::cout << Register::RegisterUser({ "hello12345567","passdffdsofs213123" });
+	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

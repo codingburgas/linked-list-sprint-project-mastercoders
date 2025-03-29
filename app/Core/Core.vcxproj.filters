@@ -41,5 +41,8 @@
     <ClInclude Include="include\models\event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

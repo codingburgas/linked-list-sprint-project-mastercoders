@@ -136,7 +136,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\Core\include\models;..\Core\include;..\Business\include;..\Business\include\pch;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Access\include;..\Core\include\models;..\Core\include;..\Business\include;..\Business\include\pch;</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
@@ -150,7 +150,7 @@
       <AdditionalDependencies>Core.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Lib>
-      <AdditionalDependencies>Core.lib;</AdditionalDependencies>
+      <AdditionalDependencies>Core.lib;Access.lib;</AdditionalDependencies>
     </Lib>
     <Lib>
       <AdditionalLibraryDirectories>..\x64\Release</AdditionalLibraryDirectories>

@@ -5,7 +5,8 @@ namespace Create
 {
 	int CreateUser(const User& data)
 	{
-		std::ofstream handle(std::filesystem::current_path().string() + "\\Data\\Users\\user" + data.username + ".txt"); // dir isn't correct
+		std::ofstream handle(R"(C:\Users\User\Pictures\projects\linked-list-sprint-project-mastercoders\app\Builder\Data\Users\user)" + data.username + ".txt"); 
+		// dir isn't correct
 
 		if (!handle.is_open())
 			return Error::ERROR_STREAM;
