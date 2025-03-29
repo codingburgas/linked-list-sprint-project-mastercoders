@@ -8,6 +8,7 @@ void ListEvent::InsertDate(const EventData& data)
 	{
 		head = new Node;
 		head->data = data;
+		count++;
 	}
 	else
 	{
@@ -23,7 +24,6 @@ void ListEvent::InsertDate(const EventData& data)
 		add->data = data;
 		List<EventData>::InsertPos(t, add);
 	}
-	count++;
 }
 void ListEvent::PrintEvent()
 {

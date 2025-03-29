@@ -96,4 +96,5 @@ void List<T>::InsertPos(Node* p, Node* node)
 
 	if (!p->next)
 		tail = node;
+	count++;
 }
