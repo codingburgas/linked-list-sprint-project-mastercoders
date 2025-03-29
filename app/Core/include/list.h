@@ -36,6 +36,8 @@ public:
 	bool DelFront();
 	// delete at last pos
 	bool DelBack();
+	// delete all nodes
+	bool DelAll();
 
 	// return current size
 	const int& Size() const { return count; }
@@ -63,12 +65,18 @@ public:
 	List<std::string>& NameList() const;
 	// returns list with all events' data with the same topic
 	List<EventData>& EventList(std::string topic) const;
-};
-
+}; 
 template<class T>
 List<T>::~List()
 {
+	DelAll();
+}
+template<class T>
+bool List<T>::DelAll()
+{
+	if (!head) return false;
 	Node* thead = head;
+
 	while (thead)
 	{
 		Node* del = thead;
@@ -79,7 +87,9 @@ List<T>::~List()
 			del = nullptr;
 		}
 	}
+
 	tail = nullptr;
+	return true;
 }
 template <class T>
 void List<T>::InsertFront(const T& data)
