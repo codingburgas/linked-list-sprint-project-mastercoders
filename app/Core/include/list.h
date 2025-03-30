@@ -17,6 +17,8 @@ protected:
 	Node* head;
 	Node* tail;
 	int count;
+	// insert by a given node
+	bool InsertPos(Node* ppos, const T& data);
 public:
 	List() : head(nullptr), tail(nullptr),count(0)
 	{
@@ -30,8 +32,6 @@ public:
 	void InsertFront(const T& data);
 	// insert at last pos
 	void InsertBack(const T& data);
-	// insert by a given node
-	bool InsertPos(Node* ppos,const T& data);
 	// insert by a given position
 	bool InsertPos(int pos, const T& data);
 
