@@ -139,7 +139,7 @@ bool List<T>::InsertPos(Node* ppos, const T& data)
 template<class T>
 bool List<T>::InsertPos(int pos, const T& data)
 {
-	if (!head || pos <= 0 || pos > count) return false;
+	if (pos <= 0 || pos > count) return false;
 	Node* thead = head;
 
 	for(int i = 0; i < pos - 1;i++)
