@@ -66,7 +66,7 @@ public:
 	// replace event data at certain pos
 	bool ReplaceEvent(int pos, const EventData& data) const;
 	// search an event by year and topic, return true if found
-	bool SearchData(int year, std::string topic) const;
+	bool SearchEvent(int year, std::string topic) const;
 
 	// returns a list with all events' names
 	List<std::string>& NameList() const;

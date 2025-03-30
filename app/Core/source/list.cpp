@@ -40,7 +40,7 @@ bool ListEvent::ReplaceEvent(int pos, const EventData& data) const
 	thead->data = data;
 	return true;
 }
-bool ListEvent::SearchData(int year, std::string topic) const
+bool ListEvent::SearchEvent(int year, std::string topic) const
 {
 	if (!head) return false;
 
