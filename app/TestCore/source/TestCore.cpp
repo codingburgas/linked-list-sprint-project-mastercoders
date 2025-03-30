@@ -9,7 +9,7 @@ namespace TestCore
 	TEST_CLASS(TestList)
 	{
 	public:
-		
+
 		TEST_METHOD(TestInsertFront)
 		{
 			//Arrange
@@ -80,7 +80,7 @@ namespace TestCore
 				ll.InsertBack(i + 1);
 			}
 			ll.DelBack();
-		
+
 			//Assert
 			Assert::AreEqual(expected, ll[8]);
 		}
@@ -128,6 +128,10 @@ namespace TestCore
 			//Assert
 			Assert::AreEqual(expected, sum);
 		}
+	};
+	TEST_CLASS(TestListEvent)
+	{
+	public:
 		TEST_METHOD(TestInsertDate)
 		{
 			//Arrange
@@ -143,12 +147,12 @@ namespace TestCore
 			for (int i = 0; i < 3; i++)
 				le.InsertDate(data[i]);
 			
-			char digits[3] = { (le.Get(1).year % 10) + '0',(le.Get(2).year % 10)+'0',(le.Get(3).year % 10)+'0'};
+			char digits[3] = { (le.Get(1).year % 10) + '0',(le.Get(2).year % 10)+'0',(le.Get(3).year % 10)+'0'}; // we take the years' last digits and turn them into chars
 			std::string actual;
 			for (int i = 0; i < 3; i++)
-				actual.push_back(digits[i]);
+				actual.push_back(digits[i]); // we put the digits in a string
 			//Assert
-			Assert::AreEqual(expected, actual);
+			Assert::AreEqual(expected, actual); // if their order isn't ascending, assert happens
 		}
 		TEST_METHOD(TestEventList)
 		{
@@ -166,11 +170,11 @@ namespace TestCore
 			for (int i = 0; i < 3; i++)
 				le.InsertBack(data[i]);
 
-			ListEvent leRes = le.EventList("FirstWar");
+			ListEvent leRes = le.EventList(expectedTopic); // list with events with the same topic
 			for (int i = 0; i < leRes.Size(); i++)
 			{
 				if (leRes.Get(i + 1).topic != expectedTopic)
-					actual = false;
+					actual = false; // if the topic is not the same actual becomes false and asserts later
 			}
 			
 			//Assert
