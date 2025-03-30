@@ -52,7 +52,7 @@ public:
 		return Get(pos);
 	}
 	// return whether list is empty or not
-	bool IsEmpty() { return !head; }
+	bool IsEmpty() const { return !head; }
 };
 class ListEvent : public List<EventData>
 {
