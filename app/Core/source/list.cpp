@@ -18,7 +18,7 @@ bool ListEvent::InsertDate(const EventData& data)
 		ppos = thead;
 		thead = thead->next;
 	}
-	if (!ppos) // if node to is first, ppos is null and insert front is used
+	if (!ppos) // if node to insert first, ppos is null and insert front is used
 	{
 		InsertFront(data);
 		return true;
