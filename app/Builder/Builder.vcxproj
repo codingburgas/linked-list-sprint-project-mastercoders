@@ -21,6 +21,17 @@
   <ItemGroup>
     <ClCompile Include="source\builder.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Access\Access.vcxproj">
+      <Project>{778c79cf-d69d-45aa-a4c7-6bf99b07a70a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Business\Business.vcxproj">
+      <Project>{092457a8-a952-4c65-9d74-eff7d8fdf1ab}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.vcxproj">
+      <Project>{3fb08f6a-e251-499d-a48f-41c4cf83e629}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -128,8 +139,9 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\x64\Release</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Core.lib;Business.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
