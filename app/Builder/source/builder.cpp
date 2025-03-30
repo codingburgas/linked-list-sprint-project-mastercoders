@@ -11,7 +11,7 @@
 #pragma warning(disable : 4996)
 int main()
 {
-	/*ListEvent le;
+	ListEvent le;
 	EventData data[3];
 	data[0].name = "event1";
 	data[1].name = "event2";
@@ -23,18 +23,15 @@ int main()
 	data[1].topic = "topic2";
 	data[2].topic = "topic3";
 
-	data[0].year = 1901;
-	data[1].year = 1905;
-	data[2].year = 1903;
+	data[0].year = 1909;
+	data[1].year = 1900;
+	data[2].year = 1901;
 
 	for(int i = 0; i < 3;i++)
 	le.InsertDate(data[i]);
 
-	le.PrintEvent();*/
+	le.PrintEvent();
 
-//	std::cout << Register::RegisterUser({ "Hello123456","Passssssss12345457" });
-	std::cout << Register::RegisterUser({ "hello12345567","passdffdsofs213123" });
-	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

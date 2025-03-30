@@ -118,7 +118,7 @@ bool List<T>::InsertPos(Node* ppos, const T& data)
 
 	if (!head)
 	{
-		InsertBack(data);
+		InsertFront(data);
 		return true;
 	}
 	Node* add = new Node;

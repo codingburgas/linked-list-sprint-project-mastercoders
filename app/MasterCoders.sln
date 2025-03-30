@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Builder", "Builder\Builder.vcxproj", "{2BBEC44B-E89C-4FAA-9698-63621DAB766C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{52FF5E5F-D9DA-4F03-9145-B84263AB1696} = {52FF5E5F-D9DA-4F03-9145-B84263AB1696}
+		{F43C6211-A555-490B-AD35-26FA3755CB51} = {F43C6211-A555-490B-AD35-26FA3755CB51}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core", "Core\Core.vcxproj", "{3FB08F6A-E251-499D-A48F-41C4CF83E629}"
 EndProject
@@ -13,7 +17,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Business", "Business\Busine
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Access", "Access\Access.vcxproj", "{778C79CF-D69D-45AA-A4C7-6BF99B07A70A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCore", "..\..\movie-ticket-booking-system-10th-grade-AILalev22\app\TestCore\TestCore.vcxproj", "{DA4EC2CD-9BA8-4D6B-89AA-AFF8537BF9AE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCore", "TestCore\TestCore.vcxproj", "{52FF5E5F-D9DA-4F03-9145-B84263AB1696}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,14 +67,14 @@ Global
 		{778C79CF-D69D-45AA-A4C7-6BF99B07A70A}.Release|x64.Build.0 = Release|x64
 		{778C79CF-D69D-45AA-A4C7-6BF99B07A70A}.Release|x86.ActiveCfg = Release|Win32
 		{778C79CF-D69D-45AA-A4C7-6BF99B07A70A}.Release|x86.Build.0 = Release|Win32
-		{DA4EC2CD-9BA8-4D6B-89AA-AFF8537BF9AE}.Debug|x64.ActiveCfg = Debug|x64
-		{DA4EC2CD-9BA8-4D6B-89AA-AFF8537BF9AE}.Debug|x64.Build.0 = Debug|x64
-		{DA4EC2CD-9BA8-4D6B-89AA-AFF8537BF9AE}.Debug|x86.ActiveCfg = Debug|Win32
-		{DA4EC2CD-9BA8-4D6B-89AA-AFF8537BF9AE}.Debug|x86.Build.0 = Debug|Win32
-		{DA4EC2CD-9BA8-4D6B-89AA-AFF8537BF9AE}.Release|x64.ActiveCfg = Release|x64
-		{DA4EC2CD-9BA8-4D6B-89AA-AFF8537BF9AE}.Release|x64.Build.0 = Release|x64
-		{DA4EC2CD-9BA8-4D6B-89AA-AFF8537BF9AE}.Release|x86.ActiveCfg = Release|Win32
-		{DA4EC2CD-9BA8-4D6B-89AA-AFF8537BF9AE}.Release|x86.Build.0 = Release|Win32
+		{52FF5E5F-D9DA-4F03-9145-B84263AB1696}.Debug|x64.ActiveCfg = Debug|x64
+		{52FF5E5F-D9DA-4F03-9145-B84263AB1696}.Debug|x64.Build.0 = Debug|x64
+		{52FF5E5F-D9DA-4F03-9145-B84263AB1696}.Debug|x86.ActiveCfg = Debug|Win32
+		{52FF5E5F-D9DA-4F03-9145-B84263AB1696}.Debug|x86.Build.0 = Debug|Win32
+		{52FF5E5F-D9DA-4F03-9145-B84263AB1696}.Release|x64.ActiveCfg = Release|x64
+		{52FF5E5F-D9DA-4F03-9145-B84263AB1696}.Release|x64.Build.0 = Release|x64
+		{52FF5E5F-D9DA-4F03-9145-B84263AB1696}.Release|x86.ActiveCfg = Release|Win32
+		{52FF5E5F-D9DA-4F03-9145-B84263AB1696}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

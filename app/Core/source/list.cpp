@@ -4,28 +4,26 @@
 bool ListEvent::InsertDate(const EventData& data)
 {
 	if (data.year < 0) return false;
+	Node* thead = head;
+	Node* ppos = nullptr;
+
 	if (!head)
 	{
 		InsertBack(data);
 		return true;
 	}
-	else
+
+	while (thead && thead->data.year < data.year)
 	{
-		Node* thead = head;
-		Node* ppos = nullptr;
-		while (thead&& thead->data.year < data.year)
-		{
-			ppos = thead;
-			thead = thead->next;
-		}
-		if (!ppos)
-		{
-			InsertFront(data);
-			return true;
-		}
-		if(InsertPos(ppos, data)) return true;
+		ppos = thead;
+		thead = thead->next;
 	}
-	return false;
+	if (!ppos)
+	{
+		InsertFront(data);
+		return true;
+	}
+	return InsertPos(ppos, data);
 }
 bool ListEvent::ReplaceEvent(int pos, const EventData& data) const
 {
