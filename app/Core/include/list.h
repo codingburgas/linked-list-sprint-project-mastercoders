@@ -32,6 +32,8 @@ public:
 	void InsertBack(const T& data);
 	// insert by a given node
 	bool InsertPos(Node* ppos,const T& data);
+	// insert by a given position
+	bool InsertPos(int pos, const T& data);
 
 	// delete at a certain pos, starting at one
 	bool DelPos(int pos);
@@ -133,6 +135,18 @@ bool List<T>::InsertPos(Node* ppos, const T& data)
 
 	count++;
 	return true;
+}
+template<class T>
+bool List<T>::InsertPos(int pos, const T& data)
+{
+	if (!head) return false;
+	Node* thead = head;
+
+	for(int i = 0; i < pos - 1;i++)
+	{
+		thead = thead->next;
+	}
+	return InsertPos(thead, data);
 }
 template<class T>
 const T& List<T>::Get(int pos) const
