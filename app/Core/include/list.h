@@ -229,5 +229,6 @@ bool List<T>::DelAll()
 	}
 
 	tail = nullptr;
+	count = 0;
 	return true;
 }
