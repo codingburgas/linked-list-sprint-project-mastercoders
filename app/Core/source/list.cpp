@@ -72,7 +72,7 @@ void ListEvent::PrintEvent(std::string topic) const
 		thead = thead->next;
 	}
 }
-List<std::string> &ListEvent::NameList() const
+List<std::string> ListEvent::NameList() const
 {
 	List <std::string> names;
 	if (!head) return names;
@@ -85,7 +85,7 @@ List<std::string> &ListEvent::NameList() const
 	}
 	return names;		
 }
-ListEvent& ListEvent::EventList(std::string topic) const
+ListEvent ListEvent::EventList(std::string topic) const
 {
 	ListEvent events;
 	if (!head || topic.empty()) return events;

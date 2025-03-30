@@ -128,7 +128,7 @@ namespace TestCore
 			//Assert
 			Assert::AreEqual(expected, sum);
 		}
-		TEST_METHOD(TestListEventInsertData)
+		TEST_METHOD(TestListEventInsertDate)
 		{
 			//Arrange
 			ListEvent le;
@@ -147,6 +147,32 @@ namespace TestCore
 			std::string actual;
 			for (int i = 0; i < 3; i++)
 				actual.push_back(digits[i]);
+			//Assert
+			Assert::AreEqual(expected, actual);
+		}
+		TEST_METHOD(TestListEventEventList)
+		{
+			//Arrange
+			ListEvent le;
+			EventData data[3];
+			data[0].topic = "FirstWar";
+			data[1].topic = "SecondWar";
+			data[2].topic = "FirstWar";
+			bool expected = true;
+			bool actual = true;
+
+			std::string expectedTopic = "FirstWar";
+			//Act
+			for (int i = 0; i < 3; i++)
+				le.InsertBack(data[i]);
+
+			ListEvent leRes = le.EventList("FirstWar");
+			for (int i = 0; i < leRes.Size(); i++)
+			{
+				if (leRes.Get(i + 1).topic != expectedTopic)
+					actual = false;
+			}
+			
 			//Assert
 			Assert::AreEqual(expected, actual);
 		}
