@@ -10,7 +10,7 @@ namespace TestCore
 	{
 	public:
 		
-		TEST_METHOD(TestListInsertFront)
+		TEST_METHOD(TestInsertFront)
 		{
 			//Arrange
 			List<int> ll;
@@ -24,7 +24,7 @@ namespace TestCore
 
 			Assert::AreEqual(expected, ll[1]);
 		}
-		TEST_METHOD(TestListInsertBack)
+		TEST_METHOD(TestInsertBack)
 		{
 			//Arrange
 			List<int> ll;
@@ -38,7 +38,7 @@ namespace TestCore
 
 			Assert::AreEqual(expected, ll[1]);
 		}
-		TEST_METHOD(TestListDelFront)
+		TEST_METHOD(TestDelFront)
 		{
 			//Arrange
 			List<int> ll;
@@ -53,7 +53,7 @@ namespace TestCore
 			//Assert
 			Assert::AreEqual(expected, ll[1]);
 		}
-		TEST_METHOD(TestListDelBack1)
+		TEST_METHOD(TestDelBack1)
 		{
 			//Arrange
 			List<int> ll;
@@ -69,7 +69,7 @@ namespace TestCore
 			//Assert
 			Assert::AreEqual(expected, ll[8]);
 		}
-		TEST_METHOD(TestListDelBack2)
+		TEST_METHOD(TestDelBack2)
 		{
 			//Arrange
 			List<int> ll;
@@ -84,7 +84,7 @@ namespace TestCore
 			//Assert
 			Assert::AreEqual(expected, ll[8]);
 		}
-		TEST_METHOD(TestListDelAll)
+		TEST_METHOD(TestDelAll)
 		{
 			//Arrange
 			List<int> ll;
@@ -101,7 +101,7 @@ namespace TestCore
 			//Assert
 			Assert::AreEqual(expected, size);
 		}
-		TEST_METHOD(TestListIsEmpty)
+		TEST_METHOD(TestIsEmpty)
 		{
 			//Arrange
 			List<int> ll;
@@ -112,7 +112,7 @@ namespace TestCore
 			//Assert
 			Assert::AreEqual(expected, ll.IsEmpty());
 		}
-		TEST_METHOD(TestListGet)
+		TEST_METHOD(TestGet)
 		{
 			//Arrange
 			List<int> ll;
@@ -128,7 +128,7 @@ namespace TestCore
 			//Assert
 			Assert::AreEqual(expected, sum);
 		}
-		TEST_METHOD(TestListEventInsertDate)
+		TEST_METHOD(TestInsertDate)
 		{
 			//Arrange
 			ListEvent le;
@@ -150,7 +150,7 @@ namespace TestCore
 			//Assert
 			Assert::AreEqual(expected, actual);
 		}
-		TEST_METHOD(TestListEventEventList)
+		TEST_METHOD(TestEventList)
 		{
 			//Arrange
 			ListEvent le;
