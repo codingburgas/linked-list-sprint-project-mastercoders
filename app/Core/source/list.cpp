@@ -3,13 +3,13 @@
 
 bool ListEvent::InsertDate(const EventData& data)
 {
-	if (data.year < 0) return false;
+	if (data.year < 0) return false; // if year is incorrect, or has default value -1, return
 	Node* thead = head;
-	Node* ppos = nullptr;
+	Node* ppos = nullptr; // node before pos to insert
 
 	if (!head)
 	{
-		InsertBack(data);
+		InsertBack(data); // if list is empty, insert data using insert back
 		return true;
 	}
 
@@ -18,16 +18,16 @@ bool ListEvent::InsertDate(const EventData& data)
 		ppos = thead;
 		thead = thead->next;
 	}
-	if (!ppos)
+	if (!ppos) // if node to is first, ppos is null and insert front is used
 	{
 		InsertFront(data);
 		return true;
 	}
-	return InsertPos(ppos, data);
+	return InsertPos(ppos, data); // if pos is not at first pos or list is empty, insert using insert pos
 }
 bool ListEvent::ReplaceEvent(int pos, const EventData& data) const
 {
-	if (pos <= 0 || pos > count) return false;
+	if (pos <= 0 || pos > count) return false; // if pos is not valid,r eturn
 	
 	Node* thead = head;
 	for (int i = 0; thead && i < pos - 1; i++)
@@ -35,7 +35,7 @@ bool ListEvent::ReplaceEvent(int pos, const EventData& data) const
 		thead = thead->next;
 	}
 
-	if (!thead) return false;
+	if (!thead) return false; // if node at pos doesn't exist, return
 
 	thead->data = data;
 	return true;
@@ -45,38 +45,34 @@ bool ListEvent::SearchEvent(int year, std::string topic) const
 	if (!head) return false;
 
 	Node* thead = head;
-	while (thead && thead->data.year != year && thead->data.topic != topic)
+	while (thead && thead->data.year != year && thead->data.topic != topic) // loop while data does not match
 	{
 		thead = thead->next;
 	}
 
-	if (!thead) return false;
+	if (!thead) return false; // check if node at pos is not null
 	if (thead->data.year == year && thead->data.topic == topic) return true;
 	return false;
 }
 void ListEvent::PrintEvent(std::string topic) const
 {
 	Node* thead = head;
-	//bool condition = topic.empty() ? thead != nullptr : thead && thead->data.topic == topic;
 
 	while (thead)
 	{
-		/*if (topic == thead->data.topic && !topic.empty())
-		{*/
-			EventData* event = &thead->data;
-			std::cout << "Event name: " << event->name << std::endl;
-			std::cout << "Year: " << event->year << std::endl;
-			std::cout << "Topic: " << event->topic << std::endl;
-		/*}*/
-		// other data print later on
+		EventData* event = &thead->data;
+		std::cout << "Event name: " << event->name << std::endl;
+		std::cout << "Year: " << event->year << std::endl;
+		std::cout << "Topic: " << event->topic << std::endl;
+
 		thead = thead->next;
 	}
 }
 List<std::string> ListEvent::NameList() const
-{
-	List <std::string> names;
-	if (!head) return names;
-
+{	
+	List <std::string> names; // list with events' names
+	if (!head) return names; // if list is empty return empty list
+	
 	Node* thead = head;
 	while (thead)
 	{
@@ -88,12 +84,12 @@ List<std::string> ListEvent::NameList() const
 ListEvent ListEvent::EventList(std::string topic) const
 {
 	ListEvent events;
-	if (!head || topic.empty()) return events;
+	if (!head || topic.empty()) return events; // if list is empty or topic is empty return empty list
 		
 	Node* thead = head;	
 	while (thead)
 	{
-		if (thead->data.topic == topic)
+		if (thead->data.topic == topic) // if topic matches append to new list
 			events.InsertBack(thead->data);
 		thead = thead->next;
 	}

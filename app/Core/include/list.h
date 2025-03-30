@@ -114,14 +114,14 @@ void List<T>::InsertBack(const T& data)
 template<class T>
 bool List<T>::InsertPos(Node* ppos, const T& data)
 {
-	if (!ppos) return false;
+	if (!ppos) return false; // if not before pos is null, return
 
 	if (!head)
 	{
 		InsertFront(data);
 		return true;
 	}
-	Node* add = new Node;
+	Node* add = new Node; // new node to insert
 	add->data = data;
 
 	add->prev = ppos;
@@ -129,7 +129,7 @@ bool List<T>::InsertPos(Node* ppos, const T& data)
 	if (ppos->next)
 		ppos->next->prev = add;
 
-	if (!ppos->next)
+	if (!ppos->next) // if node after ppos is last, assign tail to be the new node
 		tail = add;
 	ppos->next = add;
 
@@ -139,26 +139,33 @@ bool List<T>::InsertPos(Node* ppos, const T& data)
 template<class T>
 bool List<T>::InsertPos(int pos, const T& data)
 {
-	if (pos <= 0 || pos > count) return false;
-	Node* thead = head;
-
-	for(int i = 0; i < pos - 1;i++)
+	if (!head || pos <= 0 || pos > count + 1)
 	{
+		InsertBack(data);
+		return true;
+	}
+
+	Node* thead = head;
+	Node* ppos = nullptr; // node at pos before pos
+	for (int i = 0; i < pos - 1 && thead; i++) 
+	{
+		ppos = thead;
 		thead = thead->next;
 	}
-	return InsertPos(thead, data);
+
+	return InsertPos(ppos, data);
 }
 template<class T>
 const T& List<T>::Get(int pos) const
 {
-	if (pos <= 0 || pos > count) return T();
+	if (pos <= 0 || pos > count) return T(); // if pos is incorrect, return default value for T
 
 	Node* thead = head;
 	for (int i = 0; i < pos - 1 && thead; i++)
 	{
 		thead = thead->next;
 	}
-	return thead->data;
+	return thead->data; // return node data at pos
 }
 template<class T>
 bool List<T>::DelFront()
@@ -166,7 +173,7 @@ bool List<T>::DelFront()
 	if (!head) return false;
 	Node* del = head; // node to delete
 
-	if (!head->next && head == tail) tail = nullptr;
+	if (!head->next && head == tail) tail = nullptr; // if head is tail, make tail to be nullptr
 
 	head = head->next;
 	head->prev = nullptr;
@@ -202,14 +209,14 @@ bool List<T>::DelPos(int pos)
 	if (pos <= 0 || pos > count) return false;
 
 	Node* thead = head;
-	Node* ppos = nullptr;
+	Node* ppos = nullptr; // node before pos
 	for (int i = 0; thead && i < pos - 1; i++)
 	{
 		ppos = thead;
 		thead = thead->next;
 	}
 
-	Node* del = thead;
+	Node* del = thead; // node to delete
 	ppos->next = thead->next;
 
 	if (thead->next)
@@ -233,7 +240,7 @@ bool List<T>::DelAll()
 
 	while (thead)
 	{
-		Node* del = thead;
+		Node* del = thead; // node to delete
 		thead = thead->next;
 		if (del)
 		{
