@@ -135,16 +135,6 @@ namespace TestCore
 			EventData data[3];
 			std::string expected = "019";
 
-			data[0].name = "event1";
-			data[1].name = "event2";
-			data[2].name = "event3";
-
-			data[0].otherData = data[1].otherData = data[2].otherData = {};
-
-			data[0].topic = "topic1";
-			data[1].topic = "topic2";
-			data[2].topic = "topic3";
-
 			data[0].year = 1909;
 			data[1].year = 1900;
 			data[2].year = 1901;
@@ -152,7 +142,7 @@ namespace TestCore
 			//Act
 			for (int i = 0; i < 3; i++)
 				le.InsertDate(data[i]);
-
+			
 			char digits[3] = { (le.Get(1).year % 10) + '0',(le.Get(2).year % 10)+'0',(le.Get(3).year % 10)+'0'};
 			std::string actual;
 			for (int i = 0; i < 3; i++)
