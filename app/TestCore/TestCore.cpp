@@ -13,7 +13,7 @@ namespace TestCore
 		{
 			//Arrange
 			List<int> ll;
-			int expected = 6;
+			int expected = 5;
 			//Act
 			for (int i = 0; i < 5; i++)
 			{
