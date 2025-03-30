@@ -153,7 +153,7 @@ namespace TestCore
 			for (int i = 0; i < 3; i++)
 				le.InsertDate(data[i]);
 
-			char digits[3] = { (le.Get(1).year % 10) + '0',(le.Get(2).year % 10),(le.Get(3).year % 10) };
+			char digits[3] = { (le.Get(1).year % 10) + '0',(le.Get(2).year % 10)+'0',(le.Get(3).year % 10)+'0'};
 			std::string actual;
 			for (int i = 0; i < 3; i++)
 				actual.push_back(digits[i]);
