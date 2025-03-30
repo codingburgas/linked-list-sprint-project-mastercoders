@@ -18,7 +18,11 @@ bool ListEvent::InsertDate(const EventData& data)
 			ppos = thead;
 			thead = thead->next;
 		}
-		
+		if (!ppos)
+		{
+			InsertFront(data);
+			return true;
+		}
 		if(InsertPos(ppos, data)) return true;
 	}
 	return false;
@@ -55,17 +59,17 @@ bool ListEvent::SearchData(int year, std::string topic) const
 void ListEvent::PrintEvent(std::string topic) const
 {
 	Node* thead = head;
-	bool condition = topic.empty() ? thead != nullptr : thead && thead->data.topic == topic;
+	//bool condition = topic.empty() ? thead != nullptr : thead && thead->data.topic == topic;
 
-	while (condition)
+	while (thead)
 	{
-		if (topic == thead->data.topic && !topic.empty())
-		{
+		/*if (topic == thead->data.topic && !topic.empty())
+		{*/
 			EventData* event = &thead->data;
 			std::cout << "Event name: " << event->name << std::endl;
 			std::cout << "Year: " << event->year << std::endl;
 			std::cout << "Topic: " << event->topic << std::endl;
-		}
+		/*}*/
 		// other data print later on
 		thead = thead->next;
 	}
