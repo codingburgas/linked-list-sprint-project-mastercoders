@@ -188,20 +188,20 @@ bool List<T>::DelPos(int pos)
 	if (pos <= 0 || pos > count) return false;
 
 	Node* thead = head;
-	Node* t = nullptr;
+	Node* ppos = nullptr;
 	for (int i = 0; thead && i < pos - 1; i++)
 	{
-		t = thead;
+		ppos = thead;
 		thead = thead->next;
 	}
 
 	Node* del = thead;
-	t->next = thead->next;
+	ppos->next = thead->next;
 
 	if (thead->next)
-		thead->next->prev = t;
+		thead->next->prev = ppos;
 	else
-		if (del == tail) tail = t; /// thead is last node, no next after it, reassign tail
+		if (del == tail) tail = ppos; /// if thead is last node, no next after it, reassign tail
 
 	if (del)
 	{
