@@ -68,29 +68,30 @@ void ListEvent::PrintEvent(std::string topic) const
 		thead = thead->next;
 	}
 }
-List<std::string> ListEvent::NameList() const
-{	
-	List <std::string> names; // list with events' names
-	if (!head) return names; // if list is empty return empty list
-	
+std::shared_ptr<List<std::string>> ListEvent::NameList() const
+{
+	if (!head) return nullptr;
 	Node* thead = head;
+	
+	auto names = std::make_shared<List<std::string>>();
 	while (thead)
 	{
-		names.InsertBack(thead->data.name);
+		names->InsertBack(thead->data.name);
 		thead = thead->next;
 	}
-	return names;		
+	return names;
 }
-ListEvent ListEvent::EventList(std::string topic) const
-{
-	ListEvent events;
-	if (!head || topic.empty()) return events; // if list is empty or topic is empty return empty list
+std::shared_ptr<ListEvent> ListEvent::EventList(std::string topic) const
+{	
+	if (!head || topic.empty()) return nullptr; // if list is empty or topic is empty return empty list
 		
-	Node* thead = head;	
+	auto events = std::make_shared<ListEvent>();
+	Node* thead = head;
+
 	while (thead)
 	{
 		if (thead->data.topic == topic) // if topic matches append to new list
-			events.InsertBack(thead->data);
+		events->InsertBack(thead->data);
 		thead = thead->next;
 	}
 	return events;

@@ -69,9 +69,9 @@ public:
 	bool SearchEvent(int year, std::string topic) const;
 
 	// returns a list with all events' names
-	List<std::string> NameList() const;
+	std::shared_ptr<List<std::string>> NameList() const;
 	// returns list with all events' data with the same topic
-	ListEvent EventList(std::string topic) const;
+	std::shared_ptr <ListEvent> EventList(std::string topic) const;
 };
 template <class T>
 void List<T>::InsertFront(const T& data)
