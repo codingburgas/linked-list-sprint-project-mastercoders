@@ -146,8 +146,8 @@ namespace TestCore
 			//Act
 			for (int i = 0; i < 3; i++)
 				le.InsertDate(data[i]);
-			
-			char digits[3] = { (le.Get(1).year % 10) + '0',(le.Get(2).year % 10)+'0',(le.Get(3).year % 10)+'0'}; // we take the years' last digits and turn them into chars
+
+			char digits[3] = { (le.Get(1).year % 10) + '0',(le.Get(2).year % 10) + '0',(le.Get(3).year % 10) + '0' }; // we take the years' last digits and turn them into chars
 			std::string actual;
 			for (int i = 0; i < 3; i++)
 				actual.push_back(digits[i]); // we put the digits in a string
@@ -170,13 +170,13 @@ namespace TestCore
 			for (int i = 0; i < 3; i++)
 				le.InsertBack(data[i]);
 
-			ListEvent leRes = le.EventList(expectedTopic); // list with events with the same topic
-			for (int i = 0; i < leRes.Size(); i++)
+			auto leRes = le.EventList(expectedTopic); // list with events with the same topic
+			for (int i = 0; i < leRes->Size(); i++)
 			{
-				if (leRes.Get(i + 1).topic != expectedTopic)
+				if (leRes->Get(i + 1).topic != expectedTopic)
 					actual = false; // if the topic is not the same actual becomes false and asserts later
 			}
-			
+
 			//Assert
 			Assert::AreEqual(expected, actual);
 		}
@@ -218,6 +218,29 @@ namespace TestCore
 
 			//Assert
 			Assert::AreEqual(expected, actual);
+		}
+		TEST_METHOD(TestNameList)
+		{
+			//Arrange
+			ListEvent le;
+			EventData data[3];
+
+			data[0].name = "War1";
+			data[1].name = "War2";
+			std::string expected = "War1War2"; //expected result with appended names
+
+			//Act
+			for (int i = 0; i < 2; i++)
+				le.InsertBack(data[i]);
+
+			auto names = le.NameList(); // list with events' names
+			std::string actual; // string with appended all events' names
+			for (int i = 0; i < names->Size(); i++)
+				actual.append(names->Get(i + 1));
+
+			//Assert
+			Assert::AreEqual(expected, actual);
+
 		}
 	};
 }
