@@ -45,7 +45,7 @@ namespace Menu
 
 		Utils::Clear();
 
-		switch (Process::InputLogSign(atoi(choice.c_str()))) //switch inital options error code
+		switch (Process::InputLogSign(std::stoi(choice))) //switch inital options error code
 		{
 		case Error::SUCCESSFUL: Utils::Clear(); break;
 		default:
@@ -74,7 +74,7 @@ namespace Menu
 
 			std::cout << ":";
 			std::cin >> choice;
-			switch (atoi(choice.c_str()))
+			switch (std::stoi(choice))
 			{
 			case 0:
 			{
