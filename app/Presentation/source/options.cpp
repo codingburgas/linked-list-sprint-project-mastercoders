@@ -4,9 +4,6 @@ namespace Options
 {
 	void ShowAllEvents()
 	{
-		Utils::Clear();
-		Utils::CheckNotInit();
-
 		auto events = Global::GetEvents();
 
 		events->PrintEvent(); // print all events
@@ -15,9 +12,7 @@ namespace Options
 		Utils::Clear();
 	}
 	void InsertEvent()
-	{		
-		Utils::CheckNotInit();
-
+	{
 		auto events = Global::GetEvents();
 		EventData event; // entered event data
 
@@ -28,7 +23,6 @@ namespace Options
 	}
 	void ReplaceEvent()
 	{
-		Utils::CheckNotInit();
 		auto events = Global::GetEvents();
 
 		std::cout << "Enter number of event to replace:\n:";
