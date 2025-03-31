@@ -21,35 +21,12 @@ namespace Options
 		auto events = Global::GetEvents();
 		EventData event; // entered event data
 
-		std::cout << std::endl;
-		std::cout << "Enter event's name\n:";
-		std::cin >> event.name;
+		Utils::EnterEventData(event);
 
-		std::cout << "Enter event's year\n:";
-		std::cin >> event.year;
+		std::string count; // participants count
 
-		std::cout << "Enter event's topic\n:";
-		std::cin >> event.topic;
+		Utils::EnterNumber(count); // enter count
 
-		std::cout << "Enter event's leader\n:";
-		std::cin >> event.otherData.leader;
-		
-		std::cout << "Enter event's result\n:";
-		std::cin >> event.otherData.result;
-
-		std::cout << "Enter number of participants\n";
-		std::string count = "";
-
-		while(true)
-		{
-			std::cout << ":";
-			std::cin >> count;
-			if (std::all_of(count.begin(), count.end(), ::isdigit))
-			{
-				if (std::stoi(count) > 0)
-					break; // break if count is a non-negative number
-			}
-		}
 		std::cout << "\nEnter participants\n";
 		for (int i = 0; i < std::stoi(count); i++)
 		{
@@ -64,6 +41,11 @@ namespace Options
 	void ReplaceEvent()
 	{
 		Utils::CheckNotInit();
-		
+		auto events = Global::GetEvents();
+		std::cout << "Enter number of event to replace:\n:";
+
+		std::string num = "";
+		Utils::EnterNumber(num);
+
 	}
 }
