@@ -5,6 +5,7 @@ namespace Options
 {
 	void ShowAllEvents()
 	{
+		Utils::Clear();
 		auto events = Global::GetEvents();
 		if (!events)
 		{
@@ -12,7 +13,8 @@ namespace Options
 			return; // stop the function if events hasn't been init
 		}
 
-		events->PrintEvent(); // print all events	
+		events->PrintEvent(); // print all events
+		Sleep(500);
 	}
 	void InsertEvent()
 	{
@@ -40,11 +42,21 @@ namespace Options
 		std::cout << "Enter event's result\n:";
 		std::cin >> event.otherData.result;
 
-		std::cout << "Enter number of participants\n:";
-		int count;
-		std::cin >> count;
+		std::cout << "Enter number of participants\n";
+		std::string count = "";
 
-		for (int i = 0; i < count; i++)
+		while(true)
+		{
+			std::cout << ":";
+			std::cin >> count;
+			if (std::all_of(count.begin(), count.end(), ::isdigit))
+			{
+				if (std::stoi(count) > 0)
+					break; // break if count is a non-negative number
+			}
+		}
+		std::cout << "\nEnter participants\n";
+		for (int i = 0; i < std::stoi(count); i++)
 		{
 			std::string participant;
 			std::cout << ":";

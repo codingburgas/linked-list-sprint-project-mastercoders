@@ -75,6 +75,8 @@ namespace Menu
 
 			std::cout << ":";
 			std::cin >> choice;
+
+			Utils::Clear();
 			switch (std::stoi(choice))
 			{
 			case 0:
@@ -84,6 +86,8 @@ namespace Menu
 				exit(0);
 				break;
 			}
+			case 1: Options::ShowAllEvents(); break;
+			case 2: Options::InsertEvent(); break;
 			}
 		}
 	}
