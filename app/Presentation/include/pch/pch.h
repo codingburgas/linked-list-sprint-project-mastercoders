@@ -9,4 +9,5 @@
 #include "find.h"
 #include "error.h"
 #include <windows.h>
+#include "list.h"
 #include "utils.h"

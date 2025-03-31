@@ -3,6 +3,7 @@
 #include "caption.h"
 #include "process.h"
 #include "presentation.h"
+#include "options.h"
 namespace Menu
 {
 	void Main()
