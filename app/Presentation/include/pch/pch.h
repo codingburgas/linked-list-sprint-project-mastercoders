@@ -3,6 +3,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
+#include <vector>
 #include <string>
 #include "user.h"
 #include "register.h"
