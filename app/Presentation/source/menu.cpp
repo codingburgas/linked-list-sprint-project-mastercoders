@@ -62,7 +62,29 @@ namespace Menu
 	}
 	void MainMenu()
 	{
-		
+		std::string choice = ""; // user choice;
+		while (choice != "0")
+		{
+			std::cout << "Options:\n";
+			std::cout << "0. exit\n";
+			std::cout << "1. show all events\n";
+			std::cout << "2. insert a new event\n";
+			std::cout << "3. replace an existing event\n";
+			std::cout << "4. delete an existing event\n";
+
+			std::cout << ":";
+			std::cin >> choice;
+			switch (atoi(choice.c_str()))
+			{
+			case 0:
+			{
+				std::cout << "\nQuiting!";
+				Sleep(500);
+				exit(0);
+				break;
+			}
+			}
+		}
 	}
 
 }
