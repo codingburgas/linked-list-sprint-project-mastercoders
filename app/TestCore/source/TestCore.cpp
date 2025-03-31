@@ -226,6 +226,31 @@ namespace TestCore
 
 			//Assert
 			Assert::AreEqual(expected, actual);
+		}
+		TEST_METHOD(TestReplaceEvent)
+		{
+			//Arrange
+			ListEvent le;
+			EventData data[3];
+			data[0].name = "Balkan War";
+			data[1].name = "W W I";
+			data[2].name = "W W II";
+			data[0].topic = "Balkan War";
+			data[1].topic = "First War";
+			data[2].topic = "Second war";
+			data[0].year = 1912;
+			data[1].year = 1914;
+			data[2].year = 1939;
+			bool expected = true;
+			bool actual = true;
 
+			//Act
+			for (int i = 0; i < 3; i++)
+				le.InsertBack(data[i]);
+			actual = le.ReplaceEvent(3, data[1]);
+
+			//Assert
+			Assert::AreEqual(expected, actual);
+		}
 	};
 }
