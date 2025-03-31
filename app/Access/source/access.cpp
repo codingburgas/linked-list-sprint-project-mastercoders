@@ -1,7 +1,7 @@
-#include "pch.h"
-#include "business.h"
+#include "access.h"
 #include "global.h"
-namespace Business
+
+namespace Access
 {
 	bool Init()
 	{
