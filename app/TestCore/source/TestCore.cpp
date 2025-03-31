@@ -180,6 +180,27 @@ namespace TestCore
 			//Assert
 			Assert::AreEqual(expected, actual);
 		}
-	};
+		TEST_METHOD(TestSearchEvent)
+		{
+			//Arrange
+			ListEvent le;
+			EventData data[2];
+			data[0].name = "Balkan War";
+			data[1].name = "Balkan Wara";
+			data[0].topic = "War";
+			data[1].topic = "Wara";
+			data[0].year = 1912;
+			data[1].year = 1911;
+			bool expected = true;
+			bool actual = true;
 
+			//Act
+			for (int i = 0; i < 2; i++)
+				le.InsertBack(data[i]);
+			actual = le.SearchEvent(data[0].year, data[0].topic);
+
+			//Assert
+			Assert::AreEqual(expected, actual);
+		}
+	};
 }
