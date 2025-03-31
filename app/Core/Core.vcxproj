@@ -19,14 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\core.cpp" />
     <ClCompile Include="source\list.cpp" />
     <ClCompile Include="source\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\core.h" />
     <ClInclude Include="include\error.h" />
     <ClInclude Include="include\list.h" />
     <ClInclude Include="include\pch\pch.h" />

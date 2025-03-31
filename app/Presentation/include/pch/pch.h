@@ -1,0 +1,12 @@
+#pragma once
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <string>
+#include "user.h"
+#include "register.h"
+#include "find.h"
+#include "error.h"
+#include <windows.h>
+#include "utils.h"

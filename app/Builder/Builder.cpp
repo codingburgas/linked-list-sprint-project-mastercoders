@@ -1,9 +1,6 @@
-
-#include <iostream>
-#include "user.h"
-#include "register.h"
+#include "menu.h"
 int main()
 {
-	std::cout << Register::RegisterUser({ "Jack1234567","Pass1234567" });
+	Menu::Main();
 }
 
