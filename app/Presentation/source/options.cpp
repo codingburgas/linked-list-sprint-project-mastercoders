@@ -49,4 +49,10 @@ namespace Options
 		events->DelPos(std::stoi(num)); // delete event at wanted position
 		Utils::Clear();
 	}
+	void Exit()
+	{
+		std::cout << "\nQuiting!";
+		Sleep(500);
+		exit(0);
+	}
 }

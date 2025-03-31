@@ -10,4 +10,6 @@ namespace Options
 	void ReplaceEvent();
 	// delete an event from the global event list
 	void DeleteEvent();
+	// exit option
+	void Exit();
 }

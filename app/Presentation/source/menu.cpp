@@ -81,13 +81,7 @@ namespace Menu
 			Utils::Clear();
 			switch (std::stoi(choice))
 			{
-			case 0:
-			{
-				std::cout << "\nQuiting!";
-				Sleep(500);
-				exit(0);
-				break;
-			}
+			case 0: Options::Exit(); break; // exit option
 			case 1: Options::ShowAllEvents(); break;// show all events option
 			case 2: Options::InsertEvent(); break; // insert an event option
 			case 3: Options::ReplaceEvent(); break; // replace an existing event option
