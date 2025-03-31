@@ -30,6 +30,7 @@ namespace Options
 	{
 		Utils::CheckNotInit();
 		auto events = Global::GetEvents();
+
 		std::cout << "Enter number of event to replace:\n:";
 
 		std::string num = "";
@@ -39,5 +40,6 @@ namespace Options
 		std::cout << "Enter new event's data:\n";
 		Utils::EnterEventData(data);
 
+		events->ReplaceEvent(std::stoi(num), data); // replace event after inserting its data
 	}
 }
