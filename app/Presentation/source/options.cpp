@@ -6,12 +6,9 @@ namespace Options
 	void ShowAllEvents()
 	{
 		Utils::Clear();
+		CheckNotInit();
+
 		auto events = Global::GetEvents();
-		if (!events)
-		{
-			std::cerr << "Error\n";
-			return; // stop the function if events hasn't been init
-		}
 
 		events->PrintEvent(); // print all events
 		_getch(); // wait for user to press
@@ -19,13 +16,10 @@ namespace Options
 		Utils::Clear();
 	}
 	void InsertEvent()
-	{
+	{		
+		CheckNotInit();
+
 		auto events = Global::GetEvents();
-		if (!events)
-		{
-			std::cerr << "Error\n";
-			return; // stop the function if events hasn't been init
-		}
 		EventData event; // entered event data
 
 		std::cout << std::endl;
@@ -67,5 +61,20 @@ namespace Options
 		}
 		Utils::Clear();
 		events->InsertDate(event); // insert event sorted by year
+	}
+	void ReplaceEvent()
+	{
+		CheckNotInit();
+		
+	}
+	void CheckNotInit()
+	{
+		auto events = Global::GetEvents();
+		if (!events)
+		{
+			std::cerr << "\nError\n";
+			Sleep(500);
+			exit(1);
+		}
 	}
 }
