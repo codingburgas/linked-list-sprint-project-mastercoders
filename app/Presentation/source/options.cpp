@@ -1,12 +1,11 @@
 #include "pch.h"
 #include "options.h"
-#include "global.h"
 namespace Options
 {
 	void ShowAllEvents()
 	{
 		Utils::Clear();
-		CheckNotInit();
+		Utils::CheckNotInit();
 
 		auto events = Global::GetEvents();
 
@@ -17,7 +16,7 @@ namespace Options
 	}
 	void InsertEvent()
 	{		
-		CheckNotInit();
+		Utils::CheckNotInit();
 
 		auto events = Global::GetEvents();
 		EventData event; // entered event data
@@ -64,17 +63,7 @@ namespace Options
 	}
 	void ReplaceEvent()
 	{
-		CheckNotInit();
+		Utils::CheckNotInit();
 		
-	}
-	void CheckNotInit()
-	{
-		auto events = Global::GetEvents();
-		if (!events)
-		{
-			std::cerr << "\nError\n";
-			Sleep(500);
-			exit(1);
-		}
 	}
 }

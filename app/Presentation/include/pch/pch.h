@@ -14,3 +14,4 @@
 #include <windows.h>
 #include "list.h"
 #include "utils.h"
+#include "global.h"
