@@ -35,7 +35,6 @@ namespace Utils
 		std::cin >> event.otherData.result;
 
 		std::cout << "Enter number of participants\n";
-		std::string count = "";
 	}
 	void EnterNumber(std::string& num)
 	{

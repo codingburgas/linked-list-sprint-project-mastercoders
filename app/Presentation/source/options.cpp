@@ -46,6 +46,10 @@ namespace Options
 
 		std::string num = "";
 		Utils::EnterNumber(num);
+		
+		EventData data;
+		std::cout << "Enter new event's data:\n";
+		Utils::EnterEventData(data);
 
 	}
 }
