@@ -10,7 +10,7 @@ namespace Menu
 	{
 		if (!Presentation::Init()) // init other logic layers
 		{
-			std::cout << "\nInternal error. Quiting!";
+			std::cerr << "\nInternal error. Quiting!";
 			Sleep(500);
 			exit(1);
 		}
@@ -20,7 +20,7 @@ namespace Menu
 
 		if (!Presentation::Release()) // release other logic layers
 		{
-			std::cout << "\nInternal error. Quiting!";
+			std::cerr << "\nInternal error. Quiting!";
 			Sleep(500);
 			exit(1);
 		}
@@ -52,7 +52,7 @@ namespace Menu
 		default:
 		{
 			Utils::Clear();
-			std::cout << "\nError\n";
+			std::cerr << "\nError\n";
 			Sleep(500); // wait 0.5 seconds to show error msg
 			Utils::Clear();
 			
