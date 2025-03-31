@@ -19,13 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\access.h" />
     <ClInclude Include="include\create.h" />
+    <ClInclude Include="include\global.h" />
     <ClInclude Include="include\pch\pch.h" />
     <ClInclude Include="models\event.h" />
     <ClInclude Include="models\user.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\access.cpp" />
     <ClCompile Include="source\create.cpp" />
+    <ClCompile Include="source\global.cpp" />
     <ClCompile Include="source\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
