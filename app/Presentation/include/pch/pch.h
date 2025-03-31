@@ -10,6 +10,7 @@
 #include "register.h"
 #include "find.h"
 #include "error.h"
+#include <conio.h>
 #include <windows.h>
 #include "list.h"
 #include "utils.h"

@@ -14,7 +14,9 @@ namespace Options
 		}
 
 		events->PrintEvent(); // print all events
-		Sleep(500);
+		_getch(); // wait for user to press
+
+		Utils::Clear();
 	}
 	void InsertEvent()
 	{
@@ -63,6 +65,7 @@ namespace Options
 			std::cin >> participant;
 			event.otherData.participants.push_back(participant);
 		}
+		Utils::Clear();
 		events->InsertDate(event); // insert event sorted by year
 	}
 }
