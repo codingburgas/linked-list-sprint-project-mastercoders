@@ -25,7 +25,7 @@ bool ListEvent::InsertDate(const EventData& data)
 	}
 	return InsertPos(ppos, data); // if pos is not at first pos or list is empty, insert using insert pos
 }
-bool ListEvent::ReplaceEvent(int pos, const EventData& data) const
+bool ListEvent::ReplaceEvent(const int& pos, const EventData& data) const
 {
 	if (pos <= 0 || pos > count) return false; // if pos is not valid,r eturn
 	
@@ -40,7 +40,7 @@ bool ListEvent::ReplaceEvent(int pos, const EventData& data) const
 	thead->data = data;
 	return true;
 }
-bool ListEvent::SearchEvent(int year, std::string topic) const
+bool ListEvent::SearchEvent(const int& year, const std::string& topic) const
 {
 	if (!head) return false;
 
@@ -54,7 +54,7 @@ bool ListEvent::SearchEvent(int year, std::string topic) const
 	if (thead->data.year == year && thead->data.topic == topic) return true;
 	return false;
 }
-void ListEvent::PrintEvent(std::string topic) const
+void ListEvent::PrintEvent() const
 {
 	Node* thead = head;
 
@@ -81,7 +81,7 @@ std::shared_ptr<List<std::string>> ListEvent::NameList() const
 	}
 	return names;
 }
-std::shared_ptr<ListEvent> ListEvent::EventList(std::string topic) const
+std::shared_ptr<ListEvent> ListEvent::EventList(const std::string& topic) const
 {	
 	if (!head || topic.empty()) return nullptr; // if list is empty or topic is empty return empty list
 		
