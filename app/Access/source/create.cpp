@@ -3,7 +3,7 @@
 
 namespace Create
 {
-	int CreateUser(const User& data,const std::string& dir)
+	int CreateUser(const User& data, const std::string& dir)
 	{
 		std::ofstream handle(dir + data.username + ".txt"); 
 		// dir isn't correct
