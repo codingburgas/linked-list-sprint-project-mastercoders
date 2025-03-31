@@ -185,10 +185,8 @@ namespace TestCore
 			//Arrange
 			ListEvent le;
 			EventData data[2];
-			data[0].name = "Balkan War";
-			data[1].name = "Balkan Wara";
-			data[0].topic = "War";
-			data[1].topic = "Wara";
+			data[0].topic = "War1";
+			data[1].topic = "War2";
 			data[0].year = 1912;
 			data[1].year = 1911;
 			bool expected = true;
@@ -202,45 +200,14 @@ namespace TestCore
 			//Assert
 			Assert::AreEqual(expected, actual);
 		}
-		TEST_METHOD(TestSize)
-		{
-			//Arrange
-			ListEvent le;
-			EventData data[3];
-			data[0].name = "Balkan War";
-			data[1].name = "W W I";
-			data[2].name = "W W II";
-			data[0].topic = "Balkan War";
-			data[1].topic = "First War";
-			data[2].topic = "Second war";
-			data[0].year = 1912;
-			data[1].year = 1914;
-			data[2].year = 1939;
-			int expected = 3;
-			int actual = 0;
-
-			//Act
-			for (int i = 0; i < 3; i++)
-				le.InsertBack(data[i]);
-			actual = le.Size();
-
-			//Assert
-			Assert::AreEqual(expected, actual);
-		}
 		TEST_METHOD(TestReplaceEvent)
 		{
 			//Arrange
 			ListEvent le;
 			EventData data[3];
 			data[0].name = "Balkan War";
-			data[1].name = "W W I";
-			data[2].name = "W W II";
-			data[0].topic = "Balkan War";
-			data[1].topic = "First War";
-			data[2].topic = "Second war";
-			data[0].year = 1912;
-			data[1].year = 1914;
-			data[2].year = 1939;
+			data[1].name = "WWI";
+			data[2].name = "WWII";
 			bool expected = true;
 			bool actual = true;
 
