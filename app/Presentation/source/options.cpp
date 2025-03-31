@@ -23,18 +23,6 @@ namespace Options
 
 		Utils::EnterEventData(event);
 
-		std::string count; // participants count
-
-		Utils::EnterNumber(count); // enter count
-
-		std::cout << "\nEnter participants\n";
-		for (int i = 0; i < std::stoi(count); i++)
-		{
-			std::string participant;
-			std::cout << ":";
-			std::cin >> participant;
-			event.otherData.participants.push_back(participant);
-		}
 		Utils::Clear();
 		events->InsertDate(event); // insert event sorted by year
 	}
