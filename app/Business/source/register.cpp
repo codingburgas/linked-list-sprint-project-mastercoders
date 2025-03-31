@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "register.h"
-#include "find.h"
-#include "valid.h"
+#include "create.h"
 namespace Register
 {
 	int RegisterUser(const User& data)
@@ -9,6 +8,10 @@ namespace Register
 		if (Find::FindUser(data)) return Error::ERROR_EXISTS;
 		if (!Validation::IsValidUser(data)) return Error::ERROR_INPUT;
 		
-		return Create::CreateUser(data); // return crud operation result
+		if (Create::CreateUser(data, createUserDir) != Error::SUCCESSFUL) // try to create user at users folder
+		{
+			return Create::CreateUser(data, "");  // return final crud operation result
+		}
+		return Error::SUCCESSFUL;
 	}
 }
