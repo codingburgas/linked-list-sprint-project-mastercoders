@@ -21,6 +21,8 @@
   <ItemGroup>
     <ClInclude Include="include\create.h" />
     <ClInclude Include="include\pch\pch.h" />
+    <ClInclude Include="models\event.h" />
+    <ClInclude Include="models\user.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\create.cpp" />

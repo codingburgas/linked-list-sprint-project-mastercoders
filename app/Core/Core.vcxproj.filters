@@ -21,9 +21,6 @@
     <ClCompile Include="source\list.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\event.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="source\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,9 +33,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\pch\pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\models\event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\error.h">

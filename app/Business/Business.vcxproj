@@ -136,7 +136,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\Access\include;..\Core\include\models;..\Core\include;..\Business\include;..\Business\include\pch;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Access\include;..\Access\include\models;..\Core\include;..\Business\include;..\Business\include\pch;</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>

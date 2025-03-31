@@ -21,6 +21,12 @@
     <ClInclude Include="include\pch\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="models\event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="models\user.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\create.cpp">
