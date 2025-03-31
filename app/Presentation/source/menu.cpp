@@ -88,8 +88,10 @@ namespace Menu
 				exit(0);
 				break;
 			}
-			case 1: Options::ShowAllEvents(); break;
-			case 2: Options::InsertEvent(); break;
+			case 1: Options::ShowAllEvents(); break;// show all events option
+			case 2: Options::InsertEvent(); break; // insert an event option
+			case 3: Options::ReplaceEvent(); break; // replace an existing event option
+			case 4: Options::DeleteEvent(); break; // delete an existing event option
 			}
 		}
 	}
