@@ -35,6 +35,7 @@ namespace Options
 		Utils::EnterEventData(data);
 
 		events->ReplaceEvent(std::stoi(num), data); // replace event after inserting its data
+		Utils::Clear();
 	}
 	void DeleteEvent()
 	{
@@ -46,5 +47,6 @@ namespace Options
 		Utils::EnterNumber(num);
 
 		events->DelPos(std::stoi(num)); // delete event at wanted position
+		Utils::Clear();
 	}
 }
