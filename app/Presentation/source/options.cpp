@@ -36,4 +36,15 @@ namespace Options
 
 		events->ReplaceEvent(std::stoi(num), data); // replace event after inserting its data
 	}
+	void DeleteEvent()
+	{
+		auto events = Global::GetEvents();
+
+		std::cout << "Enter which event to remove:\n";
+		std::string num;// number of event to delete
+
+		Utils::EnterNumber(num);
+
+		events->DelPos(std::stoi(num)); // delete event at wanted position
+	}
 }

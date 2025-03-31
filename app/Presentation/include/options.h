@@ -8,4 +8,6 @@ namespace Options
 	void InsertEvent();
 	// replace an event from the global event list
 	void ReplaceEvent();
+	// delete an event from the global event list
+	void DeleteEvent();
 }
