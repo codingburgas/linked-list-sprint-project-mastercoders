@@ -27,7 +27,7 @@ namespace Utils
 		std::cout << "Enter event's name\n:";
 		std::cin >> event.name;
 
-		std::cout << "Enter event's year\n:";
+		std::cout << "Enter event's year\n";
 		std::string strYear;
 		EnterNumber(strYear);
 
