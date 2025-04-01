@@ -8,6 +8,7 @@ namespace Caption
 		if (!handle.is_open()) // if file cannot be opened print non-art text
 		{
 			std::cout << "----------TimeList----------\n";
+			handle.close();
 			return;
 		}
 
@@ -16,5 +17,6 @@ namespace Caption
 		{
 			std::cout << line << std::endl;
 		}
+		handle.close();
 	}
 }
