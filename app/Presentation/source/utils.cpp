@@ -1,19 +1,24 @@
 #include "pch.h"
 #include "utils.h"
+#include "options.h"
 namespace Utils
 {
 	void Clear()
 	{
 		system("cls");
 	}
+	void Exit()
+	{
+		std::cout << "\nQuiting!";
+		Sleep(500);
+		exit(0);
+	}
 	void CheckNotInit()
 	{
 		auto events = Global::GetEvents();
 		if (!events)
 		{
-			std::cerr << "\nError\n";
-			Sleep(500);
-			exit(1);
+			Exit();
 		}
 	}
 	void EnterEventData(EventData& event)

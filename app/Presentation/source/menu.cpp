@@ -10,7 +10,7 @@ namespace Menu
 	{
 		if (!Presentation::Init()) // init other logic layers
 		{
-			Utils::Exit(); // use exit option to close if init fails
+			Utils::Exit(); // exit if init fails
 		}
 
 		InitialMenu(); //call initial menu
