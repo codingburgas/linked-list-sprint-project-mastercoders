@@ -25,5 +25,19 @@ namespace TestAccess
 			Assert::AreEqual(expected, actual);
 			
 		}
+		TEST_METHOD(TestInitRelease)
+		{
+			// Arrange
+			bool expected = 0; // events ptr should be null when released
+			bool actual;
+
+			//Act
+			Global::Init(); // init global event list
+			Global::Release(); // release global event list
+			auto events = Global::GetEvents();
+			actual = events.get(); // actual is either 1 or 0 depending if events is freeed or no
+
+			Assert::AreEqual(expected, actual);
+		}
 	};
 }

@@ -8,8 +8,12 @@
 #define PCH_H
 
 // add headers that you want to pre-compile here
+#include <memory>
+#include <vector>
 #include <string>
 #include "user.h"
 #include "create.h"
 #include "error.h"
+#include "list.h"
+#include "global.h"
 #endif //PCH_H
