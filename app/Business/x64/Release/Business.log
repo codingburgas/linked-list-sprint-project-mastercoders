@@ -1,6 +1,8 @@
-﻿  pch.cpp
-  find.cpp
-  register.cpp
-  valid.cpp
-  Replacing x64\Release\pch.obj
+﻿  Replacing x64\Release\pch.obj
+Access.lib(list.obj) : warning LNK4006: "public: class std::shared_ptr<class ListEvent> __cdecl ListEvent::EventList(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)const " (?EventList@ListEvent@@QEBA?AV?$shared_ptr@VListEvent@@@std@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@@Z) already defined in Core.lib(list.obj); second definition ignored
+Access.lib(list.obj) : warning LNK4006: "public: class std::shared_ptr<class List<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > __cdecl ListEvent::NameList(void)const " (?NameList@ListEvent@@QEBA?AV?$shared_ptr@V?$List@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@@std@@XZ) already defined in Core.lib(list.obj); second definition ignored
+Access.lib(list.obj) : warning LNK4006: "public: void __cdecl ListEvent::PrintEvent(void)const " (?PrintEvent@ListEvent@@QEBAXXZ) already defined in Core.lib(list.obj); second definition ignored
+Access.lib(list.obj) : warning LNK4006: "public: bool __cdecl ListEvent::SearchEvent(int const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)const " (?SearchEvent@ListEvent@@QEBA_NAEBHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in Core.lib(list.obj); second definition ignored
+Access.lib(list.obj) : warning LNK4006: "public: bool __cdecl ListEvent::ReplaceEvent(int const &,struct EventData const &)const " (?ReplaceEvent@ListEvent@@QEBA_NAEBHAEBUEventData@@@Z) already defined in Core.lib(list.obj); second definition ignored
+Access.lib(list.obj) : warning LNK4006: "public: bool __cdecl ListEvent::InsertDate(struct EventData const &)" (?InsertDate@ListEvent@@QEAA_NAEBUEventData@@@Z) already defined in Core.lib(list.obj); second definition ignored
   Business.vcxproj -> C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\x64\Release\Business.lib

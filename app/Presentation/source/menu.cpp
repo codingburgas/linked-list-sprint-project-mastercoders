@@ -18,8 +18,8 @@ namespace Menu
 
 		if (!Presentation::Release()) // release other logic layers
 		{
-			Utils::Exit(); // exit if releasing logic layers fails
 		}
+		Utils::Exit();
 	}
 	void InitialMenu()
 	{
@@ -77,7 +77,7 @@ namespace Menu
 			Utils::Clear();
 			switch (std::stoi(choice))
 			{
-			case 1: Options::Exit(); break; // exit option
+			case 1: Options::Exit(); return; break; // exit option
 			case 2: Options::ShowAllEvents(); break;// show all events option
 			case 3: Options::InsertEvent(); break; // insert an event option
 			case 4: Options::ReplaceEvent(); break; // replace an existing event option
