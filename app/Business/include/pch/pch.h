@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <memory>
+#include <fstream>
 #include "list.h"
 #include "user.h"
 #include "error.h"

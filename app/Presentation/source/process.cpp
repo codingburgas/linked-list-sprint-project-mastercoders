@@ -25,31 +25,10 @@ namespace Process
 	}
 	int LogIn(const User& data)
 	{
-		std::string dir; // dir of user file
-		if (Find::FindUser(data, Register::createUserDir))
-		{
-			dir = Register::createUserDir + data.username + ".txt"; // data folder user file dir
-		}
-		else if (Find::FindUser(data, ""))
-		{
-			dir = "user" + data.username + ".txt"; // default user file dir
-		}
-		else
-		{
-			return Error::ERROR_FAILED; // return if operation has failed
-		}
-
-		std::ifstream handle(dir); // handle to user file
-		std::string line;
-		while (std::getline(handle, line))
-		{
-			if (line == data.password) // check if any line matches entered password
-				return Error::SUCCESSFUL;
-		}
-		return Error::ERROR_FAILED; // return failed if password is incorrect
+		return Auth::LogUser(data);
 	}
 	int SignUp(const User& data)
 	{
-		return Register::RegisterUser(data); // try to create user and return results
+		return Auth::RegisterUser(data); // try to create user and return results
 	}
 }
