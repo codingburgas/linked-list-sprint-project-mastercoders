@@ -10,9 +10,7 @@ namespace Menu
 	{
 		if (!Presentation::Init()) // init other logic layers
 		{
-			std::cerr << "\nInternal error. Quiting!";
-			Sleep(500);
-			exit(1);
+			Options::Exit(); // use exit option to close if init fails
 		}
 
 		InitialMenu(); //call initial menu
@@ -20,9 +18,7 @@ namespace Menu
 
 		if (!Presentation::Release()) // release other logic layers
 		{
-			std::cerr << "\nInternal error. Quiting!";
-			Sleep(500);
-			exit(1);
+			Options::Exit(); // exit if releasing logic layers fails
 		}
 	}
 	void InitialMenu()
