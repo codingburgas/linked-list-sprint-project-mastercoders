@@ -71,8 +71,8 @@ namespace Menu
 			std::cout << "3. replace an existing event\n";
 			std::cout << "4. delete an existing event\n";
 
-			std::cout << ":";
-			std::cin >> choice;
+			std::cout << "Enter choice:\n";
+			Utils::EnterNumber(choice);
 
 			Utils::Clear();
 			switch (std::stoi(choice))
