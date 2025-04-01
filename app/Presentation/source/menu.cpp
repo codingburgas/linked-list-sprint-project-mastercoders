@@ -83,6 +83,7 @@ namespace Menu
 			case 4: Options::ReplaceEvent(); break; // replace an existing event option
 			case 5: Options::DeleteEvent(); break; // delete an existing event option
 			}
+			Utils::Clear();
 		}
 	}
 

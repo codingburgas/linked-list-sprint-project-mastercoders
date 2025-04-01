@@ -15,7 +15,6 @@ namespace Options
 
 		_getch(); // wait for user to press
 
-		Utils::Clear();
 	}
 	void InsertEvent()
 	{
@@ -41,7 +40,6 @@ namespace Options
 		Utils::EnterEventData(data);
 
 		events->ReplaceEvent(std::stoi(num), data); // replace event after inserting its data
-		Utils::Clear();
 	}
 	void DeleteEvent()
 	{
@@ -67,7 +65,6 @@ namespace Options
 			break;
 		}
 		}
-		Utils::Clear();
 	}
 	void Exit()
 	{
