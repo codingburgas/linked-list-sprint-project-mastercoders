@@ -51,8 +51,6 @@ namespace Options
 	}
 	void Exit()
 	{
-		std::cout << "\nQuiting!";
-		Sleep(500);
-		exit(0);
+		Utils::Exit();
 	}
 }

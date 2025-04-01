@@ -10,7 +10,7 @@ namespace Menu
 	{
 		if (!Presentation::Init()) // init other logic layers
 		{
-			Options::Exit(); // use exit option to close if init fails
+			Utils::Exit(); // use exit option to close if init fails
 		}
 
 		InitialMenu(); //call initial menu
@@ -18,7 +18,7 @@ namespace Menu
 
 		if (!Presentation::Release()) // release other logic layers
 		{
-			Options::Exit(); // exit if releasing logic layers fails
+			Utils::Exit(); // exit if releasing logic layers fails
 		}
 	}
 	void InitialMenu()

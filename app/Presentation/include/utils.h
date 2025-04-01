@@ -10,4 +10,6 @@ namespace Utils
 	void EnterEventData(EventData& event);
 	// loop while non-negative number is entered
 	void EnterNumber(std::string& num);
+	// exit with error msg
+	void Exit();
 }
