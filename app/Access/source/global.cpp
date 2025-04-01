@@ -15,7 +15,7 @@ namespace Global
 		}
 		return false;
 	}
-	bool Release()
+	bool Release() 
 	{
 		if (events)
 		{
