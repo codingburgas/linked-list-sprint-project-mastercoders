@@ -4,7 +4,7 @@ namespace Options
 {
 	void ShowAllEvents()
 	{
-		auto events = Global::GetEvents();
+		auto& events = Global::GetEvents();
 
 		if (events->IsEmpty())
 		{
@@ -19,7 +19,7 @@ namespace Options
 	}
 	void InsertEvent()
 	{
-		auto events = Global::GetEvents();
+		auto& events = Global::GetEvents();
 		EventData event; // entered event data
 
 		Utils::EnterEventData(event);
@@ -29,7 +29,7 @@ namespace Options
 	}
 	void ReplaceEvent()
 	{
-		auto events = Global::GetEvents();
+		auto& events = Global::GetEvents();
 
 		std::cout << "Enter number of event to replace:\n:";
 
@@ -45,7 +45,7 @@ namespace Options
 	}
 	void DeleteEvent()
 	{
-		auto events = Global::GetEvents();
+		auto& events = Global::GetEvents();
 
 		std::cout << "Enter which event to remove:\n";
 		std::cout << "1. First\n";
@@ -55,7 +55,7 @@ namespace Options
 		Utils::EnterNumber(num);
 
 		//events->DelPos(std::stoi(num)); // delete event at wanted position
-		events->DelBack();
+		events->DelFront();
 		Utils::Clear();
 	}
 	void Exit()
