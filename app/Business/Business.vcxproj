@@ -19,13 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\find.h" />
     <ClInclude Include="include\pch\pch.h" />
     <ClInclude Include="include\auth.h" />
     <ClInclude Include="include\valid.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\find.cpp" />
     <ClCompile Include="source\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>

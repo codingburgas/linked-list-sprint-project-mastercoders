@@ -1,4 +1,5 @@
 ﻿  pch.cpp
   auth.cpp
   valid.cpp
-LINK : fatal error LNK1181: cannot open input file 'Core.lib'
+  Replacing x64\Release\pch.obj
+  Business.vcxproj -> C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\x64\Release\Business.lib

@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="include\caption.h" />
     <ClInclude Include="include\menu.h" />
+    <ClInclude Include="include\options.h" />
     <ClInclude Include="include\pch\pch.h" />
     <ClInclude Include="include\presentation.h" />
     <ClInclude Include="include\process.h" />
@@ -29,6 +30,7 @@
   <ItemGroup>
     <ClCompile Include="source\caption.cpp" />
     <ClCompile Include="source\menu.cpp" />
+    <ClCompile Include="source\options.cpp" />
     <ClCompile Include="source\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>

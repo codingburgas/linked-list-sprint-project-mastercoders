@@ -21,18 +21,12 @@
     <ClInclude Include="include\auth.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\find.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\valid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\find.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\auth.cpp">

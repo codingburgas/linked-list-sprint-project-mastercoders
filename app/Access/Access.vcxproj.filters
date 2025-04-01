@@ -33,6 +33,9 @@
     <ClInclude Include="include\access.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\find.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\create.cpp">
@@ -45,6 +48,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\access.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\find.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
