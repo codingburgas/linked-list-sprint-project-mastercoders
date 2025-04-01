@@ -24,7 +24,7 @@ namespace Global
 		}
 		return false;
 	}
-	std::shared_ptr<ListEvent>& GetEvents()
+	std::shared_ptr<ListEvent> GetEvents()
 	{
 		return events;
 	}

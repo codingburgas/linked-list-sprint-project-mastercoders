@@ -7,5 +7,5 @@ namespace Global
 	// release global vars
 	bool Release();
 	// getter for events ptr
-	std::shared_ptr<ListEvent>& GetEvents();
+	std::shared_ptr<ListEvent> GetEvents();
 }

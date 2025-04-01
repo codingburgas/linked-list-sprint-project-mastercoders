@@ -64,7 +64,6 @@ void ListEvent::PrintEvent() const
 		std::cout << "Event name: " << event->name << std::endl;
 		std::cout << "Year: " << event->year << std::endl;
 		std::cout << "Topic: " << event->topic << std::endl;
-
 		thead = thead->next;
 	}
 }

@@ -171,18 +171,16 @@ template<class T>
 bool List<T>::DelFront()
 {
 	if (!head) return false;
-	Node* del = head; // node to delete
-
-	if (!head->next && head == tail) tail = nullptr; // if head is tail, make tail to be nullptr
-
+	Node* del = head;
 	head = head->next;
-	head->prev = nullptr;
+
+	if (!head)
+	   tail = nullptr; // there's just one node in the list	
+	else
+	   head->prev = nullptr; // make prev null
 	
-	if (del)
-	{
-		delete del;
-		del = nullptr;
-	}
+	delete del;
+
 	count--;
 	return true;
 }
@@ -207,6 +205,11 @@ template<class T>
 bool List<T>::DelPos(const int& pos)
 {
 	if (pos <= 0 || pos > count) return false;
+
+	if (pos == 1)
+	{
+		return DelFront();
+	}
 
 	Node* thead = head;
 	Node* ppos = nullptr; // node before pos
