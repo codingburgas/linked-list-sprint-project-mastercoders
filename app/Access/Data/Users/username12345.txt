@@ -1,2 +1,0 @@
-name12345
-password12345
