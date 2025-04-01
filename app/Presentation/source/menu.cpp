@@ -62,14 +62,14 @@ namespace Menu
 		Utils::CheckNotInit(); // check if global event list is not init
 
 		std::string choice = ""; // user choice;
-		while (choice != "0")
+		while (true)
 		{
 			std::cout << "Options:\n";
-			std::cout << "0. exit\n";
-			std::cout << "1. show all events\n";
-			std::cout << "2. insert a new event\n";
-			std::cout << "3. replace an existing event\n";
-			std::cout << "4. delete an existing event\n";
+			std::cout << "1. exit\n";
+			std::cout << "2. show all events\n";
+			std::cout << "3. insert a new event\n";
+			std::cout << "4. replace an existing event\n";
+			std::cout << "5. delete an existing event\n";
 
 			std::cout << "Enter choice:\n";
 			Utils::EnterNumber(choice);
@@ -77,11 +77,11 @@ namespace Menu
 			Utils::Clear();
 			switch (std::stoi(choice))
 			{
-			case 0: Options::Exit(); break; // exit option
-			case 1: Options::ShowAllEvents(); break;// show all events option
-			case 2: Options::InsertEvent(); break; // insert an event option
-			case 3: Options::ReplaceEvent(); break; // replace an existing event option
-			case 4: Options::DeleteEvent(); break; // delete an existing event option
+			case 1: Options::Exit(); break; // exit option
+			case 2: Options::ShowAllEvents(); break;// show all events option
+			case 3: Options::InsertEvent(); break; // insert an event option
+			case 4: Options::ReplaceEvent(); break; // replace an existing event option
+			case 5: Options::DeleteEvent(); break; // delete an existing event option
 			}
 		}
 	}

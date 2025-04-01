@@ -42,11 +42,11 @@ namespace Utils
 		std::cout << "Enter event's result\n:";
 		std::cin >> event.otherData.result;
 
-		std::cout << "Enter number of participants\n";
+		std::cout << "Enter number of participants:\n";
 		std::string count; // participants count
 
-		Utils::EnterNumber(count); // enter count
-		std::cout << "\nEnter participants\n";
+		EnterNumber(count); // enter count
+		std::cout << "\nEnter participants:\n";
 
 		for (int i = 0; i < std::stoi(count); i++)
 		{
