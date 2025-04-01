@@ -6,7 +6,13 @@ namespace Options
 	{
 		auto events = Global::GetEvents();
 
-		events->PrintEvent(); // print all events
+		if (events->IsEmpty())
+		{
+			std::cout << "List is empty\n";
+		}
+		else
+		events->PrintEvent(); // print all events if list is not empty
+
 		_getch(); // wait for user to press
 
 		Utils::Clear();
@@ -42,11 +48,14 @@ namespace Options
 		auto events = Global::GetEvents();
 
 		std::cout << "Enter which event to remove:\n";
+		std::cout << "1. First\n";
+		std::cout << "2. Last\n";
 		std::string num;// number of event to delete
 
 		Utils::EnterNumber(num);
 
-		events->DelPos(std::stoi(num)); // delete event at wanted position
+		//events->DelPos(std::stoi(num)); // delete event at wanted position
+		events->DelBack();
 		Utils::Clear();
 	}
 	void Exit()

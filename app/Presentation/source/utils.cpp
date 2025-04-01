@@ -28,7 +28,10 @@ namespace Utils
 		std::cin >> event.name;
 
 		std::cout << "Enter event's year\n:";
-		std::cin >> event.year;
+		std::string strYear;
+		EnterNumber(strYear);
+
+		event.year = std::stoi(strYear);
 
 		std::cout << "Enter event's topic\n:";
 		std::cin >> event.topic;
