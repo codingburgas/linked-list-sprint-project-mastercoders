@@ -42,7 +42,7 @@ namespace Utils
 		std::cout << "Enter event's result\n:";
 		std::cin >> event.otherData.result;
 
-		std::cout << "Enter number of participants\n:";
+		std::cout << "Enter number of participants\n";
 		std::string count; // participants count
 
 		Utils::EnterNumber(count); // enter count
