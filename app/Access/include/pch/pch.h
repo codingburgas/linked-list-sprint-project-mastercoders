@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <vector>
+#include "event.h"
 #include "user.h"
 #include "error.h"
 #include <fstream>

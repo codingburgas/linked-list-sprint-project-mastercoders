@@ -12,6 +12,7 @@
 #include "error.h"
 #include <conio.h>
 #include <windows.h>
+#include "event.h"
 #include "list.h"
 #include "utils.h"
 #include "global.h"

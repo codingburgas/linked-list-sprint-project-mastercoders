@@ -14,6 +14,7 @@
 #include "user.h"
 #include "create.h"
 #include "error.h"
+#include "event.h"
 #include "list.h"
 #include "global.h"
 #endif //PCH_H

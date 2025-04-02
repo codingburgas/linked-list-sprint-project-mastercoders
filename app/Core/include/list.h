@@ -1,5 +1,4 @@
 #pragma once
-#include "event.h"
 template<class T>
 class List
 {
