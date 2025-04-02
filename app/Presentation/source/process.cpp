@@ -21,7 +21,7 @@ namespace Process
 			return SignUp(userNew); // return sign up result
 		}
 
-		return -1; // prevent non-control void error
+		return Error::ERROR_FAILED; // prevent non-control void error
 	}
 	int LogIn(const User& data)
 	{
