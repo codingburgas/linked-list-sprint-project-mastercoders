@@ -12,8 +12,6 @@ namespace Access
 	}
 	bool Release()
 	{
-		if (!Global::Release())
-			return false;
 		return true;
 	}
 }

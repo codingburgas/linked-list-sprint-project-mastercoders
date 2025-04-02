@@ -17,12 +17,8 @@ namespace Global
 	}
 	bool Release() 
 	{
-		if (events)
-		{
-			events.reset();
-			return true;
-		}
-		return false;
+		events.reset();
+		return true;
 	}
 	std::shared_ptr<ListEvent> GetEvents()
 	{

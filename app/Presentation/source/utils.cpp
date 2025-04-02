@@ -15,11 +15,8 @@ namespace Utils
 	}
 	void CheckNotInit()
 	{
-		auto events = Global::GetEvents();
-		if (!events)
-		{
+		if (Global::Init()) //if list already init it will return false
 			Exit();
-		}
 	}
 	void EnterEventData(EventData& event)
 	{
@@ -62,7 +59,7 @@ namespace Utils
 		{
 			std::cout << ":";
 			std::cin >> num;
-			if (std::all_of(num.begin(), num.end(), ::isdigit))
+			if (std::all_of(num.begin(), num.end(), isdigit))
 			{
 				if (std::stoi(num) > 0)
 					break; // break if num is a non-negative number
