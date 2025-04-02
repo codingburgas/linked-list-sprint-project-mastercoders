@@ -17,7 +17,7 @@ namespace Presentation
 	}
 	bool Release()
 	{
-		if (!Access::Release())
+		if (!Core::Release())
 			return false;
 		if (!Access::Release())
 			return false;
