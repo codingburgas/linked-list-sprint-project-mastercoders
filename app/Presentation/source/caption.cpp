@@ -5,12 +5,17 @@ namespace Caption
 	void PrintCaption()
 	{
 		std::ifstream handle(R"(../Presentation/assets/timelist.txt)");
-		if (!handle.is_open()) // if file cannot be opened print non-art text
-		{
-			std::cout << "----------TimeList----------\n";
-			handle.close();
-			return;
-		}
+        if (!handle.is_open())
+        {
+			handle.clear();
+            handle.open("timelist.txt");
+
+			if (!handle.is_open())
+			{
+				std::cout << "----------TimeList----------\n";
+				return;
+			}
+        }
 
 		std::string line;
 		while (std::getline(handle, line))
