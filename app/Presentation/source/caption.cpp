@@ -7,21 +7,21 @@ namespace Caption
 		std::ifstream handle(R"(../Presentation/assets/timelist.txt)");
         if (!handle.is_open())
         {
-			handle.clear();
+            handle.clear();
             handle.open("timelist.txt");
 
-			if (!handle.is_open())
-			{
-				std::cout << "----------TimeList----------\n";
-				return;
-			}
+            if (!handle.is_open())
+            {
+                std::cout << "----------TimeList----------\n";
+                return;
+            }
         }
 
 		std::string line;
 		while (std::getline(handle, line))
 		{
-			std::cout << line << std::endl;
-		}
-		handle.close();
-	}
+            std::cout << line << std::endl;
+        }
+        handle.close();
+    }
 }
