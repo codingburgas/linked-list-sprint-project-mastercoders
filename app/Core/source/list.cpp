@@ -57,13 +57,26 @@ bool ListEvent::SearchEvent(const int& year, const std::string& topic) const
 void ListEvent::PrintEvent() const
 {
 	Node* thead = head;
+	int id = 1;
 
+	std::cout << "-----------------------------" << std::endl;
 	while (thead)
 	{
 		EventData* event = &thead->data;
+		std::cout << "Event number: " << id++ << std::endl;
 		std::cout << "Event name: " << event->name << std::endl;
 		std::cout << "Year: " << event->year << std::endl;
 		std::cout << "Topic: " << event->topic << std::endl;
+		std::cout << "Leader: " << event->otherData.leader << std::endl;
+		std::cout << "Result: " << event->otherData.result << std::endl;
+		std::cout << "Participants:\n\n";
+
+		for (size_t i = 0; i < event->otherData.participants.size();i++)
+		{
+			std::cout << "Participant " << i + 1 << ": " << event->otherData.participants[i] << std::endl;
+		}
+
+		std::cout << "-----------------------------" << std::endl;
 		thead = thead->next;
 	}
 }
