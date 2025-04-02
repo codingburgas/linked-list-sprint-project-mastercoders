@@ -179,7 +179,11 @@ bool List<T>::DelFront()
 	else
 	   head->prev = nullptr; // make prev null
 	
-	delete del;
+	if (del)
+	{
+		delete del;
+		del = nullptr;
+	}
 
 	count--;
 	return true;
