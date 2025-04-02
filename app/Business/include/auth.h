@@ -7,5 +7,5 @@ namespace Auth
 	// log in an existing user
 	int LogUser(const User& data);
 	//user folder dir
-	const std::string createUserDir = R"(..\Access\Data\Users\user)";
+	const std::string createUserDir = R"(..\Access\Data\Users\)";
 }

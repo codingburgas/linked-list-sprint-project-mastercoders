@@ -5,23 +5,23 @@ namespace Auth
 {
 	int RegisterUser(const User& data)
 	{
-		if (Find::FindUser(data,createUserDir) || Find::FindUser(data, "")) return Error::ERROR_EXISTS;
+		if (Find::FindUser(data,createUserDir + "user") || Find::FindUser(data, "user")) return Error::ERROR_EXISTS;
 		if (!Validation::IsValidUser(data)) return Error::ERROR_INPUT;
 		
-		if (Create::CreateUser(data, createUserDir) != Error::SUCCESSFUL) // try to create user at users folder
+		if (Create::CreateUser(data, createUserDir + "user") != Error::SUCCESSFUL) // try to create user at users folder
 		{
-			return Create::CreateUser(data, "");  // return final crud operation result
+			return Create::CreateUser(data, "user");  // return final crud operation result
 		}
 		return Error::SUCCESSFUL;
 	}
 	int LogUser(const User& data)
 	{
 		std::string dir; // dir of user file
-		if (Find::FindUser(data,createUserDir))
+		if (Find::FindUser(data,createUserDir + "user"))
 		{
-			dir = createUserDir + data.username + ".txt"; // data folder user file dir
+			dir = createUserDir + "user" + data.username + ".txt"; // data folder user file dir
 		}
-		else if (Find::FindUser(data, ""))
+		else if (Find::FindUser(data, "user"))
 		{
 			dir = "user" + data.username + ".txt"; // default user file dir
 		}
