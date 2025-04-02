@@ -5,7 +5,7 @@ namespace Create
 {
 	int CreateUser(const User& data, const std::string& dir)
 	{
-		std::ofstream handle(dir + data.username + ".txt"); 
+		std::ofstream handle(dir + "user" + data.username + ".txt");
 		// dir isn't correct
 
 		if (!handle.is_open())
