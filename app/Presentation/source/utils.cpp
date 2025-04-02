@@ -9,9 +9,15 @@ namespace Utils
 	}
 	void Exit()
 	{
-		std::cout << "\nQuiting!";
-		Sleep(500);
+		ErrMsg("Quiting");
 		exit(0);
+	}
+	void ErrMsg(const std::string& msg)
+	{
+		Utils::Clear();
+		std::cout << std::endl << msg;
+		Sleep(500);
+		Utils::Clear();
 	}
 	void CheckNotInit()
 	{

@@ -13,8 +13,7 @@ namespace Options
 		else
 		events->PrintEvent(); // print all events if list is not empty
 
-		_getch(); // wait for user to press
-
+		_getch(); // wait for user to press to continue
 	}
 	void InsertEvent()
 	{
@@ -30,11 +29,17 @@ namespace Options
 	{
 		auto events = Global::GetEvents();
 
-		std::cout << "Enter number of event to replace:\n:";
+		std::cout << "Enter number of event to replace:\n";
 
 		std::string num = "";
 		Utils::EnterNumber(num);
 		
+		if (std::stoi(num) > events->Size()) // if position is bigger than size of list
+		{
+			Utils::ErrMsg("Wrong position");
+			return;
+		}
+
 		EventData data;
 		std::cout << "Enter new event's data:\n";
 		Utils::EnterEventData(data);
@@ -52,6 +57,12 @@ namespace Options
 		std::string choice;
 		Utils::EnterNumber(choice);
 		
+		if (events->IsEmpty())
+		{
+			Utils::ErrMsg("List is empty");
+			return;
+		}
+
 		switch (std::stoi(choice))
 		{
 		case 1: events->DelFront(); break;
@@ -61,7 +72,15 @@ namespace Options
 			std::cout << "Enter number of event\n";
 			std::string num;
 			Utils::EnterNumber(num);
-			events->DelPos(std::stoi(num)); // delete event at wanted position
+			if (!events->DelPos(std::stoi(num))) // try to delete event at wanted position
+			{
+				Utils::ErrMsg("Wrong position");
+			}
+			break;
+		}
+		default:
+		{
+			Utils::ErrMsg("Unexpected error");
 			break;
 		}
 		}

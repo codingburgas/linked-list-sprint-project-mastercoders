@@ -47,11 +47,8 @@ namespace Menu
 		case Error::SUCCESSFUL: Utils::Clear(); break;
 		default:
 		{
-			Utils::Clear();
-			std::cerr << "\nError\n";
-			Sleep(500); // wait 0.5 seconds to show error msg
-			Utils::Clear();
-			
+			Utils::ErrMsg("Error");
+
 			goto initial;
 			break;
 		}
