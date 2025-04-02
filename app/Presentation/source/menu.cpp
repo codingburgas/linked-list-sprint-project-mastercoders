@@ -62,23 +62,29 @@ namespace Menu
 		while (true)
 		{
 			std::cout << "Options:\n";
-			std::cout << "1. exit\n";
-			std::cout << "2. show all events\n";
-			std::cout << "3. insert a new event\n";
-			std::cout << "4. replace an existing event\n";
-			std::cout << "5. delete an existing event\n";
+			std::cout << "\n1. exit\n";
+			std::cout << "\n2. show all events\n";
+			std::cout << "\n3. insert a new event\n";
+			std::cout << "\n4. replace an existing event\n";
+			std::cout << "\n5. delete an existing event\n";
+			std::cout << "\n6. show all event names\n";
+			std::cout << "\n7. show events by topic\n";
+			std::cout << "\n8. search for an event\n";
 
-			std::cout << "Enter choice:\n";
+			std::cout << "\nEnter choice:\n";
 			Utils::EnterNumber(choice);
 
 			Utils::Clear();
 			switch (std::stoi(choice))
 			{
-			case 1: Options::Exit(); return; break; // exit option
-			case 2: Options::ShowAllEvents(); break;// show all events option
-			case 3: Options::InsertEvent(); break; // insert an event option
-			case 4: Options::ReplaceEvent(); break; // replace an existing event option
-			case 5: Options::DeleteEvent(); break; // delete an existing event option
+			case 1: Options::Exit(); return; break;
+			case 2: Options::ShowAllEvents(); break;
+			case 3: Options::InsertEvent(); break;
+			case 4: Options::ReplaceEvent(); break;
+			case 5: Options::DeleteEvent(); break;
+			case 6: Options::ShowNames(); break;
+			case 7:	Options::ShowTopicEvents(); break;
+			case 8: Options::SearchEvent(); break;
 			}
 			Utils::Clear();
 		}

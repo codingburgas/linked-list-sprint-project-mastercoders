@@ -85,6 +85,63 @@ namespace Options
 		}
 		}
 	}
+	void ShowNames()
+	{
+		auto events = Global::GetEvents();
+		if (events->IsEmpty())
+		{
+			std::cout << "List is empty\n";
+		}
+		else
+		{
+			auto names = events->NameList();
+			for (int i = 0; i < names->Size(); i++)
+				std::cout << names->Get(i+1) << std::endl; // print all event names
+		}
+		_getch();
+	}
+	void ShowTopicEvents()
+	{
+		auto events = Global::GetEvents();
+		if (events->IsEmpty())
+		{
+			std::cout << "List is empty\n";
+		}
+		else
+		{
+			std::string topic;
+			
+			std::cout << "Enter topic:\n:";
+			std::cin >> topic;
+			auto eventsTopic = events->EventList(topic);
+			if(eventsTopic->IsEmpty())
+				std::cout << "No events with this topic\n";
+			else
+				eventsTopic->PrintEvent(); // print all events with the same topic
+		}
+		_getch();
+	}
+	void SearchEvent()
+	{
+		auto events = Global::GetEvents();
+		if (events->IsEmpty())
+		{
+			std::cout << "List is empty\n";
+		}
+		else
+		{
+			std::string year, topic;
+
+			std::cout << "Enter event's year:\n";
+			Utils::EnterNumber(year);
+			std::cout << "Enter event's topic:\n:";
+			std::cin >> topic;
+
+			Utils::Clear();
+			std::cout << (events->SearchEvent(std::stoi(year), topic) ? "\nEvent is found" : "\nEvent is not found");
+		}
+		_getch();
+	}
 	void Exit()
 	{
 	}
