@@ -193,6 +193,10 @@ bool List<T>::DelBack()
 {
 	if (!head || !tail) return false;
 
+	if (count == 1)
+	{
+		return DelFront();
+	}
 	Node* del = tail; // node to delete
 	del->prev->next = nullptr;
 	tail = del->prev; // assign tail to be the node before tail
