@@ -1,7 +1,5 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "list.h"
-#include "error.h"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace TestCore

@@ -1,4 +1,10 @@
-﻿  utils.cpp
+﻿  pch.cpp
+  caption.cpp
+  menu.cpp
+  options.cpp
+  presentation.cpp
+  process.cpp
+  utils.cpp
   Replacing x64\Release\pch.obj
 Business.lib(global.obj) : warning LNK4006: "class std::shared_ptr<class ListEvent> __cdecl Global::GetEvents(void)" (?GetEvents@Global@@YA?AV?$shared_ptr@VListEvent@@@std@@XZ) already defined in Access.lib(global.obj); second definition ignored
 Business.lib(global.obj) : warning LNK4006: "bool __cdecl Global::Release(void)" (?Release@Global@@YA_NXZ) already defined in Access.lib(global.obj); second definition ignored
@@ -7,6 +13,8 @@ Business.lib(find.obj) : warning LNK4006: "bool __cdecl Find::FindUser(struct Us
 Business.lib(create.obj) : warning LNK4006: "int __cdecl Create::CreateUser(struct User const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?CreateUser@Create@@YAHAEBUUser@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in Access.lib(create.obj); second definition ignored
 Business.lib(access.obj) : warning LNK4006: "bool __cdecl Access::Release(void)" (?Release@Access@@YA_NXZ) already defined in Access.lib(access.obj); second definition ignored
 Business.lib(access.obj) : warning LNK4006: "bool __cdecl Access::Init(void)" (?Init@Access@@YA_NXZ) already defined in Access.lib(access.obj); second definition ignored
+Core.lib(core.obj) : warning LNK4006: "bool __cdecl Core::Release(void)" (?Release@Core@@YA_NXZ) already defined in Business.lib(core.obj); second definition ignored
+Core.lib(core.obj) : warning LNK4006: "bool __cdecl Core::Init(void)" (?Init@Core@@YA_NXZ) already defined in Business.lib(core.obj); second definition ignored
 Core.lib(list.obj) : warning LNK4006: "public: class std::shared_ptr<class ListEvent> __cdecl ListEvent::EventList(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)const " (?EventList@ListEvent@@QEBA?AV?$shared_ptr@VListEvent@@@std@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@3@@Z) already defined in Business.lib(list.obj); second definition ignored
 Core.lib(list.obj) : warning LNK4006: "public: class std::shared_ptr<class List<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > __cdecl ListEvent::NameList(void)const " (?NameList@ListEvent@@QEBA?AV?$shared_ptr@V?$List@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@@std@@XZ) already defined in Business.lib(list.obj); second definition ignored
 Core.lib(list.obj) : warning LNK4006: "public: void __cdecl ListEvent::PrintEvent(void)const " (?PrintEvent@ListEvent@@QEBAXXZ) already defined in Business.lib(list.obj); second definition ignored

@@ -3,6 +3,6 @@
      Creating library C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\x64\Release\TestAccess.lib and object C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\x64\Release\TestAccess.exp
   Generating code
   Previous IPDB not found, fall back to full compilation.
-  All 355 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 357 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   TestAccess.vcxproj -> C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\x64\Release\TestAccess.dll

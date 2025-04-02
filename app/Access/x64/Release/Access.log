@@ -1,2 +1,6 @@
-﻿  create.cpp
+﻿  pch.cpp
+  access.cpp
+  create.cpp
+  find.cpp
+  global.cpp
   Access.vcxproj -> C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\x64\Release\Access.lib
