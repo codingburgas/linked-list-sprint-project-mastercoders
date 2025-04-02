@@ -59,7 +59,7 @@ void ListEvent::PrintEvent() const
 	Node* thead = head;
 	int id = 1;
 
-	std::cout << "-----------------------------" << std::endl;
+	std::cout << std::string(30,' ') << std::endl;
 	while (thead)
 	{
 		EventData* event = &thead->data;
@@ -76,7 +76,7 @@ void ListEvent::PrintEvent() const
 			std::cout << "Participant " << i + 1 << ": " << event->otherData.participants[i] << std::endl;
 		}
 
-		std::cout << "-----------------------------" << std::endl;
+		std::cout << std::string(30, ' ') << std::endl;
 		thead = thead->next;
 	}
 }
