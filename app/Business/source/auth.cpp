@@ -27,7 +27,7 @@ namespace Auth
 		}
 		else
 		{
-			return Error::ERROR_FAILED; // return if operation has failed
+			return Error::ERROR_FAILED; // return if user cannot be found
 		}
 
 		std::ifstream handle(dir); // handle to user file
