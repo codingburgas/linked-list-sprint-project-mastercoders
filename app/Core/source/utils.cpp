@@ -1,6 +1,5 @@
 #include "pch.h"
 #include "utils.h"
-#include "options.h"
 namespace Utils
 {
 	void Clear()
