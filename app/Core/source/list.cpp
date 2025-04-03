@@ -82,7 +82,8 @@ void ListEvent::PrintEvent() const
 }
 std::shared_ptr<List<std::string>> ListEvent::NameList() const
 {
-	if (!head) return nullptr;
+	if (!head) 
+		return nullptr;
 	Node* thead = head;
 	
 	auto names = std::make_shared<List<std::string>>();
@@ -95,7 +96,8 @@ std::shared_ptr<List<std::string>> ListEvent::NameList() const
 }
 std::shared_ptr<ListEvent> ListEvent::EventList(const std::string& topic) const
 {	
-	if (!head || topic.empty()) return nullptr; // if list is empty or topic is empty return empty list
+	if (!head || topic.empty()) 
+		return nullptr; // if list is empty or topic is empty return empty list
 		
 	auto events = std::make_shared<ListEvent>();
 	Node* thead = head;
@@ -107,4 +109,76 @@ std::shared_ptr<ListEvent> ListEvent::EventList(const std::string& topic) const
 		thead = thead->next;
 	}
 	return events;
+}
+ListEvent::Node* ListEvent::Merge(Node* a, Node* b)
+{
+	if (!a) return b;
+	if (!b) return a;
+
+	if (a->data.year < b->data.year)
+	{
+		a->next = Merge(a->next, b);
+		a->next->prev = a;
+		a->prev = nullptr;
+		return a;
+	}
+	else
+	{
+		b->next = Merge(a, b->next);
+		b->next->prev = b;
+		b->prev = nullptr;
+		return b;
+	}
+}
+
+ListEvent::Node* ListEvent::MidElement(Node* head)
+{
+	if (!head || !head->next) return head;
+	Node* thead,*thead2,*ppos = nullptr; // ppos is last node
+
+	thead = thead2 = head;
+	while (thead2 && thead2->next)
+	{
+		ppos = thead;
+		thead = thead->next;
+		thead2 = thead2->next->next;
+	}
+
+	if (ppos) 
+		ppos->next = nullptr;
+	return thead;
+}
+
+ListEvent::Node* ListEvent::MergeSort(Node* head)
+{
+	if (!head || !head->next) return head;
+	Node* mid = MidElement(head), *left = MergeSort(head), * right = MergeSort(mid);
+
+	return Merge(left, right);
+}
+
+void ListEvent::SortEvents()
+{
+	if (!head) return;
+	head = MergeSort(head);
+
+	Node* thead = head;
+	Node* ppos = head;
+	while (thead)
+	{
+		ppos = thead;
+		thead = thead->next;
+	}
+	tail = ppos; // reassign tail to point to new last element
+}
+bool ListEvent::IsSorted()
+{
+	Node* thead = head;
+	while (thead && thead->next)
+	{
+		if (thead->data.year > thead->next->data.year)
+			return false;
+		thead = thead->next;
+	}
+	return true;
 }

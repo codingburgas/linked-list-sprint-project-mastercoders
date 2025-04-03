@@ -57,6 +57,12 @@ public:
 };
 class ListEvent : public List<EventData>
 {
+	// merge used in merge sort
+	Node* Merge(Node* l1, Node* l2);
+	// function to find mid node
+	Node* MidElement(Node* head);
+	// sorting alg
+	Node* MergeSort(Node* head);
 public:
 	// insert event by year
 	bool InsertDate(const EventData& data);
@@ -71,6 +77,10 @@ public:
 	std::shared_ptr<List<std::string>> NameList() const;
 	// returns list with all events' data with the same topic
 	std::shared_ptr <ListEvent> EventList(const std::string& topic) const;
+	// sort events by year
+	void SortEvents();
+	// return whether events are sorted or not
+	bool IsSorted();
 };
 template <class T>
 void List<T>::InsertFront(const T& data)
