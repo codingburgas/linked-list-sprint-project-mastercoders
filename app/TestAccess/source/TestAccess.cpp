@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-
+#include "create.h"
+#include "find.h"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace TestAccess

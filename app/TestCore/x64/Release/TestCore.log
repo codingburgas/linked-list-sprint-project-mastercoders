@@ -2,10 +2,10 @@
   TestCore.cpp
      Creating library C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\x64\Release\TestCore.lib and object C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\x64\Release\TestCore.exp
   Generating code
-  Previous IPDB not found, fall back to full compilation.
-C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Core\include\list.h(160): warning C4172: returning address of local variable or temporary
-C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Core\include\list.h(160): warning C4172: returning address of local variable or temporary
-C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Core\include\list.h(160): warning C4172: returning address of local variable or temporary
-  All 407 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  9 of 407 functions ( 2.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    3 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
+Core.lib(list.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Core.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+Core.lib(pch.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Core.pdb' is corrupted; some symbols and types may not be accessible from the debugger
   TestCore.vcxproj -> C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\x64\Release\TestCore.dll

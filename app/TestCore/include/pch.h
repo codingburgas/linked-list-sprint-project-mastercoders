@@ -9,7 +9,6 @@
 #include <string>
 #include <memory>
 #include "event.h"
-#include "list.h"
 #include "error.h"
 // add headers that you want to pre-compile here
 

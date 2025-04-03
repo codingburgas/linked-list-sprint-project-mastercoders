@@ -1,22 +1,2 @@
 ﻿  main.cpp
-  Generating code
-C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Core\include\list.h(160): warning C4172: returning address of local variable or temporary
-  302 of 1240 functions (24.4%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    49 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-Presentation.lib(presentation.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Presentation.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Presentation.lib(menu.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Presentation.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Presentation.lib(utils.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Core.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Presentation.lib(pch.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Presentation.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Presentation.lib(process.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Presentation.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Presentation.lib(caption.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Presentation.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Presentation.lib(core.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Core.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Presentation.lib(business.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Business.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Presentation.lib(options.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Business.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Presentation.lib(auth.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Business.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Presentation.lib(list.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Core.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Business.lib(pch.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Business.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Presentation.lib(valid.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Business.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-Core.lib(pch.obj) : warning LNK4020: a type record in 'c:\users\user\music\linked-list-sprint-project-mastercoders\app\x64\release\Core.pdb' is corrupted; some symbols and types may not be accessible from the debugger
-  Builder.vcxproj -> C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\x64\Release\Builder.exe
+LINK : fatal error LNK1181: cannot open input file 'Presentation.lib'
