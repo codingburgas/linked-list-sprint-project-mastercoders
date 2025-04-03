@@ -19,7 +19,7 @@ protected:
 	// insert by a given node
 	bool InsertPos(Node* ppos, const T& data);
 public:
-	List() : head(nullptr), tail(nullptr),count(0)
+	List() : head(nullptr), tail(nullptr), count(0)
 	{
 
 	}
@@ -46,7 +46,7 @@ public:
 	// return current size
 	const int& Size() const { return count; }
 	// get data at certain pos
-	const T& Get (const int& pos) const;
+	const T& Get(const int& pos) const;
 	// same as get
 	const T& operator[](const int& pos) const
 	{
@@ -143,10 +143,15 @@ bool List<T>::InsertPos(const int& pos, const T& data)
 		InsertBack(data);
 		return true;
 	}
+	if (pos == 1)
+	{
+		InsertFront(data); // insert at front is pos is 1
+		return true;
+	}
 
 	Node* thead = head;
-	Node* ppos = nullptr; // node at pos before pos
-	for (int i = 0; i < pos - 1 && thead; i++) 
+	Node* ppos = nullptr; // prev of pos
+	for (int i = 0; i < pos - 1 && thead; i++)
 	{
 		ppos = thead;
 		thead = thead->next;
@@ -174,10 +179,10 @@ bool List<T>::DelFront()
 	head = head->next;
 
 	if (!head)
-	   tail = nullptr; // there's just one node in the list	
+		tail = nullptr; // there's just one node in the list	
 	else
-	   head->prev = nullptr; // make prev null
-	
+		head->prev = nullptr; // make prev null
+
 	if (del)
 	{
 		delete del;
