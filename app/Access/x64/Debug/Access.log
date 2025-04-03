@@ -1,0 +1,11 @@
+﻿  access.cpp
+  create.cpp
+  find.cpp
+  global.cpp
+  pch.cpp
+  Generating Code...
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Access\source\access.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Access\source\create.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Access\source\find.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Access\source\global.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Access\source\pch.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory

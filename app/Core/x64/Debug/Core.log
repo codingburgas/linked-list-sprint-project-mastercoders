@@ -1,5 +1,9 @@
-﻿  list.cpp
-  pch.cpp
-  Generating Code...
+﻿  core.cpp
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Core\source\core.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+  list.cpp
 C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Core\source\list.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+  pch.cpp
 C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Core\source\pch.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+  utils.cpp
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Core\source\utils.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+  Generating Code...

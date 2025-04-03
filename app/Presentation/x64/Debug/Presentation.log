@@ -1,0 +1,11 @@
+﻿  caption.cpp
+  menu.cpp
+  pch.cpp
+  presentation.cpp
+  process.cpp
+  Generating Code...
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Presentation\source\caption.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Presentation\source\menu.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Presentation\source\pch.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Presentation\source\presentation.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\Presentation\source\process.cpp(1,10): error C1083: Cannot open include file: 'pch.h': No such file or directory

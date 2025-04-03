@@ -1,0 +1,5 @@
+﻿  pch.cpp
+  TestCore.cpp
+  Generating Code...
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\TestCore\source\pch.cpp(3,10): error C1083: Cannot open precompiled header file: 'x64\Debug\TestCore.pch': No such file or directory
+C:\Users\User\Music\linked-list-sprint-project-mastercoders\app\TestCore\source\TestCore.cpp(1,10): error C1083: Cannot open precompiled header file: 'x64\Debug\TestCore.pch': No such file or directory
