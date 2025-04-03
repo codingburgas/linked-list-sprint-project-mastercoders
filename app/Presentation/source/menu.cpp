@@ -56,8 +56,6 @@ namespace Menu
 	}
 	void MainMenu()
 	{
-		Utils::CheckNotInit(); // check if global event list is not init
-
 		std::string choice = ""; // user choice;
 		while (true)
 		{

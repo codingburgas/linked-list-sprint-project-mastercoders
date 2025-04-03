@@ -19,11 +19,6 @@ namespace Utils
 		Sleep(500);
 		Utils::Clear();
 	}
-	void CheckNotInit()
-	{
-		if (Global::Init()) //if list already init it will return false
-			Exit();
-	}
 	void EnterEventData(EventData& event)
 	{
 		std::cout << std::endl;
