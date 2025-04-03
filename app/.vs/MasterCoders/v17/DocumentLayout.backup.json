@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\Music\\linked-list-sprint-project-mastercoders\\app\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F43C6211-A555-490B-AD35-26FA3755CB51}|Presentation\\Presentation.vcxproj|C:\\Users\\User\\Music\\linked-list-sprint-project-mastercoders\\app\\Presentation\\source\\menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F43C6211-A555-490B-AD35-26FA3755CB51}|Presentation\\Presentation.vcxproj|solutionrelative:Presentation\\source\\menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{092457A8-A952-4C65-9D74-EFF7D8FDF1AB}|Business\\Business.vcxproj|C:\\Users\\User\\Music\\linked-list-sprint-project-mastercoders\\app\\Business\\source\\options.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{092457A8-A952-4C65-9D74-EFF7D8FDF1AB}|Business\\Business.vcxproj|solutionrelative:Business\\source\\options.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +27,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "menu.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\Music\\linked-list-sprint-project-mastercoders\\app\\Presentation\\source\\menu.cpp",
+              "RelativeDocumentMoniker": "Presentation\\source\\menu.cpp",
+              "ToolTip": "C:\\Users\\User\\Music\\linked-list-sprint-project-mastercoders\\app\\Presentation\\source\\menu.cpp",
+              "RelativeToolTip": "Presentation\\source\\menu.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-03T15:19:30.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "options.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\Music\\linked-list-sprint-project-mastercoders\\app\\Business\\source\\options.cpp",
+              "RelativeDocumentMoniker": "Business\\source\\options.cpp",
+              "ToolTip": "C:\\Users\\User\\Music\\linked-list-sprint-project-mastercoders\\app\\Business\\source\\options.cpp",
+              "RelativeToolTip": "Business\\source\\options.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-03T15:19:25.957Z",
+              "EditorCaption": ""
             }
           ]
         }
