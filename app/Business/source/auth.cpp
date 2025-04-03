@@ -35,8 +35,12 @@ namespace Auth
 		while (std::getline(handle, line))
 		{
 			if (line == data.password) // check if any line matches entered password
+			{
+				handle.close();
 				return Error::SUCCESSFUL;
+			}
 		}
+		handle.close();
 		return Error::ERROR_FAILED; // return failed if password is incorrect
 	}
 }
