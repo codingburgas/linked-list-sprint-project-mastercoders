@@ -39,5 +39,20 @@ namespace TestAccess
 
 			Assert::AreEqual(expected, actual);
 		}
+		TEST_METHOD(TestFindUser)
+		{
+			User testUser;
+			testUser.username = "Daniel";
+			testUser.password = "password123";
+			bool actual;
+			bool expected = true; // user is expected to be found
+
+			//Act
+			Create::CreateUser(testUser, "");
+			actual = Find::FindUser(testUser);
+
+			//Assert
+			Assert::AreEqual(expected, actual);
+		}
 	};
 }
