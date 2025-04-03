@@ -127,7 +127,7 @@ ListEvent::Node* ListEvent::Merge(Node* a, Node* b)
 ListEvent::Node* ListEvent::MidElement(Node* head)
 {
 	if (!head || !head->next) return head;
-	Node* thead,*thead2,*ppos = nullptr; // ppos is last node
+	Node* thead,*thead2,*ppos = nullptr; // ppos is last node, node before mid
 
 	thead = thead2 = head;
 	while (thead2 && thead2->next)
