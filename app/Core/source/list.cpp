@@ -115,20 +115,13 @@ ListEvent::Node* ListEvent::Merge(Node* a, Node* b)
 	if (!a) return b;
 	if (!b) return a;
 
-	if (a->data.year < b->data.year)
-	{
-		a->next = Merge(a->next, b);
-		a->next->prev = a;
-		a->prev = nullptr;
-		return a;
-	}
-	else
-	{
-		b->next = Merge(a, b->next);
-		b->next->prev = b;
-		b->prev = nullptr;
-		return b;
-	}
+	Node*& t = a->data.year < b->data.year ? a : b;
+	Node* other = t == a ? b : a;
+
+	t->next = Merge(t->next, other);
+	t->next->prev = t;
+	t->prev = nullptr;
+	return t;
 }
 
 ListEvent::Node* ListEvent::MidElement(Node* head)
