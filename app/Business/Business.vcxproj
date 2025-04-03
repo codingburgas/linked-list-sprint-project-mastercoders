@@ -23,7 +23,6 @@
     <ClInclude Include="include\options.h" />
     <ClInclude Include="include\pch\pch.h" />
     <ClInclude Include="include\auth.h" />
-    <ClInclude Include="include\utils.h" />
     <ClInclude Include="include\valid.h" />
   </ItemGroup>
   <ItemGroup>
@@ -33,7 +32,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="source\auth.cpp" />
-    <ClCompile Include="source\utils.cpp" />
     <ClCompile Include="source\valid.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

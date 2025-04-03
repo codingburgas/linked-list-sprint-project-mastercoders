@@ -24,12 +24,14 @@
     <ClCompile Include="source\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="source\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\core.h" />
     <ClInclude Include="include\error.h" />
     <ClInclude Include="include\list.h" />
     <ClInclude Include="include\pch\pch.h" />
+    <ClInclude Include="include\utils.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
