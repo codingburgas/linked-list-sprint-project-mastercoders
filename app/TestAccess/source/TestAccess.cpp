@@ -37,10 +37,12 @@ namespace TestAccess
 			auto events = Global::GetEvents();
 			actual = events.get(); // actual is either 1 or 0 depending if events is freeed or no
 
+			//Assert
 			Assert::AreEqual(expected, actual);
 		}
 		TEST_METHOD(TestFindUser)
 		{
+			//Arrange
 			User testUser;
 			testUser.username = "Daniel";
 			testUser.password = "password123";
