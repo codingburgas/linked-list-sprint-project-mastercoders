@@ -115,7 +115,7 @@ ListEvent::Node* ListEvent::Merge(Node* a, Node* b)
 	if (!a) return b;
 	if (!b) return a;
 
-	Node*& t = a->data.year < b->data.year ? a : b;
+	Node* t = a->data.year < b->data.year ? a : b;
 	Node* other = t == a ? b : a;
 
 	t->next = Merge(t->next, other);
