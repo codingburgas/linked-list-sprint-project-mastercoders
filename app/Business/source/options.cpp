@@ -149,5 +149,6 @@ namespace Options
 	}
 	void Exit()
 	{
+		Utils::Exit();
 	}
 }

@@ -19,7 +19,7 @@ namespace Menu
 		if (!Presentation::Release()) // release other logic layers
 		{
 		}
-		Utils::Exit();
+		
 	}
 	void InitialMenu()
 	{
