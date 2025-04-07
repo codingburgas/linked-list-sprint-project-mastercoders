@@ -1,6 +1,6 @@
 <h1 align="center">MasterCoders</h1>
 <p align="center">
-    <img src="https://chatgpt-image-hosting.s3.amazonaws.com/logo-mastercoders.png" alt="MasterCoders Logo" width="150"/>
+
 </p>
 
 ## 🖥 Team Members
@@ -9,10 +9,7 @@
 * **Daniel Kostadinov** - *QA developer*
 * **Ivelin Voynov** - *Scrum trainer* 
 
-## 🚀 Languages 
 
-<p align="left"> 
-    <img src="https://user-images.githubusercontent.com/42747200/46140125-da084900-c26d-11e8-8ea7-c45ae6306309.png" width="30" height="30"/> 
 
 ## Used technologies
    
@@ -32,6 +29,6 @@
 You can download our project by using the green "Code" button.
 
 Or by pasting the following code in your CMD:
-git clone [https://github.com/codingburgas/school-project-assignment-iceflow.git](https://github.com/codingburgas/linked-list-sprint-project-mastercoders.git)
+git clone https://github.com/codingburgas/linked-list-sprint-project-mastercoders.git
 
 ```
