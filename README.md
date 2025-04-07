@@ -1,5 +1,6 @@
 <h1 align="center">MasterCoders</h1>
 <p align="center">
+    <img src="https://chatgpt-image-hosting.s3.amazonaws.com/logo-mastercoders.png" alt="MasterCoders Logo" width="150"/>
 </p>
 
 ## 🖥 Team Members
