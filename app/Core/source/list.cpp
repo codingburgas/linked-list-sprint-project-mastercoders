@@ -25,7 +25,7 @@ bool ListEvent::InsertDate(const EventData& data)
 	}
 	return InsertPos(ppos, data); // if pos is not at first pos or list is empty, insert using insert pos
 }
-bool ListEvent::ReplaceEvent(const int& pos, const EventData& data) const
+bool ListEvent::ReplaceEvent(int pos, const EventData& data) const
 {
 	if (pos <= 0 || pos > count) return false; // if pos is not valid,r eturn
 	
@@ -40,7 +40,7 @@ bool ListEvent::ReplaceEvent(const int& pos, const EventData& data) const
 	thead->data = data;
 	return true;
 }
-bool ListEvent::SearchEvent(const int& year, const std::string& topic) const
+bool ListEvent::SearchEvent(int year, const std::string& topic) const
 {
 	if (!head) return false;
 

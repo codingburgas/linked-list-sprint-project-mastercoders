@@ -32,10 +32,10 @@ public:
 	// insert at last pos
 	void InsertBack(const T& data);
 	// insert by a given position
-	bool InsertPos(const int& pos, const T& data);
+	bool InsertPos(int pos, const T& data);
 
 	// delete at a certain pos, starting at one
-	bool DelPos(const int& pos);
+	bool DelPos(int pos);
 	// delete at first pos
 	bool DelFront();
 	// delete at last pos
@@ -46,9 +46,9 @@ public:
 	// return current size
 	int Size() const { return count; }
 	// get data at certain pos
-	const T& Get(const int& pos) const;
+	const T& Get(int pos) const;
 	// same as get
-	const T& operator[](const int& pos) const
+	const T& operator[](int pos) const
 	{
 		return Get(pos);
 	}
@@ -69,9 +69,9 @@ public:
 	// print all events: name,topic,year
 	void PrintEvent() const;
 	// replace event data at certain pos
-	bool ReplaceEvent(const int& pos, const EventData& data) const;
+	bool ReplaceEvent(int pos, const EventData& data) const;
 	// search an event by year and topic, return true if found
-	bool SearchEvent(const int& year, const std::string& topic) const;
+	bool SearchEvent(int year, const std::string& topic) const;
 
 	// returns a list with all events' names
 	std::shared_ptr<List<std::string>> NameList() const;
@@ -146,7 +146,7 @@ bool List<T>::InsertPos(Node* ppos, const T& data)
 	return true;
 }
 template<class T>
-bool List<T>::InsertPos(const int& pos, const T& data)
+bool List<T>::InsertPos(int pos, const T& data)
 {
 	if (!head || pos <= 0 || pos > count + 1)
 	{
@@ -170,7 +170,7 @@ bool List<T>::InsertPos(const int& pos, const T& data)
 	return InsertPos(ppos, data);
 }
 template<class T>
-const T& List<T>::Get(const int& pos) const
+const T& List<T>::Get(int pos) const
 {
 	if (pos <= 0 || pos > count) return T(); // if pos is incorrect, return default value for T
 
@@ -224,7 +224,7 @@ bool List<T>::DelBack()
 	return true;
 }
 template<class T>
-bool List<T>::DelPos(const int& pos)
+bool List<T>::DelPos(int pos)
 {
 	if (pos <= 0 || pos > count) return false;
 
