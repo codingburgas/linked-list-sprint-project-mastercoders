@@ -47,12 +47,14 @@ namespace Menu
 		{
 			switch (res)
 			{
-			case Error::ERROR_INPUT:Utils::ErrMsg("User name and password need to contain one small,one big letter and oen number"); break;
+			case Error::ERROR_INPUT:Utils::ErrMsg("User name and password need to contain one small,one big letter and one number"); break;
 			case Error::ERROR_STREAM:Utils::ErrMsg("Internal error. Please try again later"); break;
 			case Error::ERROR_EXISTS: Utils::ErrMsg("User already exists"); break;
+			default: Utils::ErrMsg("Unexpected error. Please try again later"); break;
 			}
 			goto initial;
 		}
+		Utils::Clear();
 	}
 	void MainMenu()
 	{
