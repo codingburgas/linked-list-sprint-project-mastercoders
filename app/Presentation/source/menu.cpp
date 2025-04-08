@@ -47,7 +47,7 @@ namespace Menu
 		{
 			switch (res)
 			{
-			case Error::ERROR_INPUT:Utils::ErrMsg("User name and password need to contain one small,one big letter and one number",1); break;
+			case Error::ERROR_INPUT:Utils::ErrMsg("User name and password need to contain:\none small letter\none big letter\none number\npassword needs to be atleast 8 chars long",2.5); break;
 			case Error::ERROR_STREAM:Utils::ErrMsg("Internal error. Please try again later"); break;
 			case Error::ERROR_EXISTS: Utils::ErrMsg("User already exists"); break;
 			case Error::ERROR_FAILED: Utils::ErrMsg((choice == "1" ? "Failed to log in" : "Failed to sign up")); break;
