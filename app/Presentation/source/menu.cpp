@@ -42,17 +42,17 @@ namespace Menu
 
 		Utils::Clear();
 
-		switch (Process::InputLogSign(std::stoi(choice))) //switch inital options error code
+		int res = Process::InputLogSign(std::stoi(choice));
+		if (res != Error::SUCCESSFUL)
 		{
-		case Error::SUCCESSFUL: Utils::Clear(); break;
-		default:
-		{
-			Utils::ErrMsg("Error");
-
+			switch (res)
+			{
+			case Error::ERROR_INPUT:Utils::ErrMsg("User name and password need to contain one small,one big letter and oen number"); break;
+			case Error::ERROR_STREAM:Utils::ErrMsg("Internal error. Please try again later"); break;
+			case Error::ERROR_EXISTS: Utils::ErrMsg("User already exists"); break;
+			}
 			goto initial;
-			break;
 		}
-		};
 	}
 	void MainMenu()
 	{
