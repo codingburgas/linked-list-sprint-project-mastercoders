@@ -11,14 +11,14 @@ namespace Utils
 		ErrMsg("Quiting");
 		exit(0);
 	}
-	void ErrMsg(const std::string& msg, int wait)
+	void ErrMsg(const std::string& msg, float wait)
 	{
-		if (wait < 5) wait = 5;
-		wait *= 100;
+		if (wait < 0.5) wait = 0.5;
+		wait *= 1000;
 
 		Utils::Clear();
 		std::cout << std::endl << msg;
-		Sleep(wait);
+		Sleep((int)wait);
 		Utils::Clear();
 	}
 	void EnterEventData(EventData& event)

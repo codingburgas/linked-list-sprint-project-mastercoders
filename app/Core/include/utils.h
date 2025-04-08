@@ -10,6 +10,6 @@ namespace Utils
 	void EnterNumber(std::string& num);
 	// exit with err msg as quiting
 	void Exit();
-	// show err msg for wait miliseconds
-	void ErrMsg(const std::string& msg, int wait = 5);
+	// show err msg for wait seconds
+	void ErrMsg(const std::string& msg, float wait = 0.5);
 }
