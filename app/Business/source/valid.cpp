@@ -15,7 +15,7 @@ namespace Validation
 	{
 		if (pass.size() < 8) return false;
 
-		std::regex pattern(R"(^[0-9A-Za-z\"<>{}\[\]\\^`|/]+$)");
+		std::regex pattern(R"(^[0-9A-Za-z]+$)");
 		return std::regex_match(pass,pattern);
 	}
 }
