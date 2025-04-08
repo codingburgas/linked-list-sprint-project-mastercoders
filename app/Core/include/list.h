@@ -44,7 +44,7 @@ public:
 	bool DelAll();
 
 	// return current size
-	const int& Size() const { return count; }
+	int Size() const { return count; }
 	// get data at certain pos
 	const T& Get(const int& pos) const;
 	// same as get
@@ -80,7 +80,7 @@ public:
 	// sort events by year
 	void SortEvents();
 	// return whether events are sorted or not
-	bool IsSorted();
+	bool IsSorted() const;
 };
 template <class T>
 void List<T>::InsertFront(const T& data)

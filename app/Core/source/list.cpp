@@ -164,7 +164,7 @@ void ListEvent::SortEvents()
 	}
 	tail = ppos; // reassign tail to point to new last element
 }
-bool ListEvent::IsSorted()
+bool ListEvent::IsSorted() const
 {
 	Node* thead = head;
 	while (thead && thead->next)
