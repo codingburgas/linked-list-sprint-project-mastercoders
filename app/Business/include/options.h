@@ -16,6 +16,4 @@ namespace Options
 	void ShowTopicEvents();
 	// search for an event
 	void SearchEvent();
-	// exit option
-	void Exit();
 }

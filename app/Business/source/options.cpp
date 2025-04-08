@@ -147,8 +147,4 @@ namespace Options
 		}
 		_getch();
 	}
-	void Exit()
-	{
-		Utils::Exit();
-	}
 }
