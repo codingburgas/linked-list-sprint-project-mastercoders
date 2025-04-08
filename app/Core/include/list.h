@@ -123,7 +123,7 @@ void List<T>::InsertBack(const T& data)
 template<class T>
 bool List<T>::InsertPos(Node* ppos, const T& data)
 {
-	if (!ppos) return false; // if not before pos is null, return
+	if (!ppos) return false; // if node before pos is null, return
 
 	if (!head)
 	{

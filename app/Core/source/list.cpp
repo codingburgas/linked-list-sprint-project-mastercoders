@@ -23,11 +23,11 @@ bool ListEvent::InsertDate(const EventData& data)
 		InsertFront(data);
 		return true;
 	}
-	return InsertPos(ppos, data); // if pos is not at first pos or list is empty, insert using insert pos
+	return InsertPos(ppos, data); // if pos is not first or list is not empty, insert using insert pos
 }
 bool ListEvent::ReplaceEvent(int pos, const EventData& data) const
 {
-	if (pos <= 0 || pos > count) return false; // if pos is not valid,r eturn
+	if (pos <= 0 || pos > count) return false; // if pos is not valid, return
 	
 	Node* thead = head;
 	for (int i = 0; thead && i < pos - 1; i++)
