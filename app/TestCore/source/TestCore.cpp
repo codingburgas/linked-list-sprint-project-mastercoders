@@ -242,5 +242,46 @@ namespace TestCore
 			Assert::AreEqual(expected, actual);
 
 		}
+		TEST_METHOD(TestIsSorted)
+		{
+			//Arrange
+			ListEvent le;
+			EventData data[3];
+			bool expected = true;
+
+			data[0].year = 1909;
+			data[1].year = 1900;
+			data[2].year = 1901;
+
+			//Act
+			for (int i = 0; i < 3; i++)
+				le.InsertDate(data[i]);
+
+			bool actual = le.IsSorted();
+
+			//Assert
+			Assert::AreEqual(expected, actual);
+		}
+		TEST_METHOD(TestSortEvents)
+		{
+			//Arrange
+			ListEvent le;
+			EventData data[3];
+			bool expected = true;
+
+			data[0].year = 1909;
+			data[1].year = 1900;
+			data[2].year = 1901;
+
+			//Act
+			for (int i = 0; i < 3; i++)
+				le.InsertDate(data[i]);
+
+			le.ReplaceEvent(2, data[0]);
+			le.SortEvents();
+			bool actual = le.IsSorted();
+			//Assert
+			Assert::AreEqual(expected, actual);
+		}
 	};
 }
