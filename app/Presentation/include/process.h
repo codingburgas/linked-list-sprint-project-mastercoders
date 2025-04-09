@@ -2,10 +2,6 @@
 
 namespace Process
 {
-	// user log in processing
-	int LogIn(const User& data);
-	// user sign up processing
-	int SignUp(const User& data);
-	// get register input
+	// get register processing error code
 	int InputLogSign(const int& mode);
 }

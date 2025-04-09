@@ -14,21 +14,13 @@ namespace Process
 
 		if (mode == 1)
 		{
-			return LogIn(userNew); // return log in result
+			return Auth::LogUser(userNew); // return log in result
 		}
 		else
 		{
-			return SignUp(userNew); // return sign up result
+			return Auth::RegisterUser(userNew); // return sign up result
 		}
 
 		return Error::ERROR_FAILED; // prevent non-control void error
-	}
-	int LogIn(const User& data)
-	{
-		return Auth::LogUser(data);
-	}
-	int SignUp(const User& data)
-	{
-		return Auth::RegisterUser(data); // try to create user and return results
 	}
 }
