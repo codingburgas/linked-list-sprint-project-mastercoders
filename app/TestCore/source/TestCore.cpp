@@ -214,7 +214,7 @@ namespace TestCore
 			//Act
 			for (int i = 0; i < 3; i++)
 				le.InsertBack(data[i]);
-			actual = le.ReplaceEvent(3, data[1]);
+			actual = le.Replace(3, data[1]);
 
 			//Assert
 			Assert::AreEqual(expected, actual);
@@ -277,8 +277,8 @@ namespace TestCore
 			for (int i = 0; i < 3; i++)
 				le.InsertDate(data[i]);
 
-			le.ReplaceEvent(2, data[0]);
-			le.SortEvents();
+			le.Replace(2, data[0]);
+			le.Sort();
 			bool actual = le.IsSorted();
 			//Assert
 			Assert::AreEqual(expected, actual);
