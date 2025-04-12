@@ -10,6 +10,7 @@
 #include "find.h"
 #include "error.h"
 #include "event.h"
+#include <functional>
 #include "list.h"
 #include "utils.h"
 #include "global.h"

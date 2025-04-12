@@ -3,6 +3,7 @@
 #include <vector>
 #include <memory>
 #include "event.h"
+#include <functional>
 #include "list.h"
 #include "global.h"
 #include <fstream>

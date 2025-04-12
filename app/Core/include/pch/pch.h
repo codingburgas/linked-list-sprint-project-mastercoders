@@ -6,3 +6,4 @@
 #include <algorithm>
 #include <conio.h>
 #include "event.h"
+#include <functional>

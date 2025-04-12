@@ -6,4 +6,5 @@
 #include "error.h"
 #include <fstream>
 #include <filesystem>
+#include <functional>
 #include "list.h"

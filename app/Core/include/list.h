@@ -16,10 +16,19 @@ protected:
 	Node* head;
 	Node* tail;
 	int count;
+
+	// comparator for sort
+	std::function<bool(Node*,Node*)> cmp;
 	// insert by a given node
 	bool InsertPos(Node* ppos, const T& data);
+	// merge used in merge sort
+	Node* Merge(Node* l1, Node* l2);
+	// function to find mid node
+	Node* MidElement(Node* head);
+	// sorting alg
+	Node* MergeSort(Node* head);
 public:
-	List() : head(nullptr), tail(nullptr), count(0)
+	List(std::function<bool(Node*, Node*)> fn = nullptr) : head(nullptr), tail(nullptr), count(0),cmp(fn)
 	{
 
 	}
@@ -54,18 +63,20 @@ public:
 	}
 	// replace data at certain pos
 	bool Replace(int pos, const T& data) const;
+	// sort list using cmp lambda
+	void Sort();
 	// return whether list is empty or not
 	bool IsEmpty() const { return !head; }
+	// return whether nodes are sorted or not
+	bool IsSorted() const;
 };
 class ListEvent : public List<EventData>
 {
-	// merge used in merge sort
-	Node* Merge(Node* l1, Node* l2);
-	// function to find mid node
-	Node* MidElement(Node* head);
-	// sorting alg
-	Node* MergeSort(Node* head);
 public:
+	ListEvent() : List<EventData>([](Node* a, Node* b) { return a->data.year < b->data.year; })
+	{
+
+	}
 	// insert event by year
 	bool InsertDate(const EventData& data);
 	// print all events: name,topic,year
@@ -77,10 +88,6 @@ public:
 	std::shared_ptr<List<std::string>> NameList() const;
 	// returns list with all events' data with the same topic
 	std::shared_ptr <ListEvent> EventList(const std::string& topic) const;
-	// sort events by year
-	void SortEvents();
-	// return whether events are sorted or not
-	bool IsSorted() const;
 };
 template <class T>
 void List<T>::InsertFront(const T& data)
@@ -291,5 +298,74 @@ bool List<T>::Replace(int pos, const T& data) const
 	if (!thead) return false; // if node at pos doesn't exist, return
 
 	thead->data = data;
+	return true;
+}
+template<class T>
+class List<T>::Node* List<T>::Merge(Node* a, Node* b)
+{
+	if (!a) return b;
+	if (!b) return a;
+
+	Node* t = cmp(a,b) ? a : b;
+	Node* other = t == a ? b : a;
+
+	t->next = Merge(t->next, other);
+	t->next->prev = t;
+	t->prev = nullptr;
+	return t;
+}
+template<class T>
+class List<T>::Node* List<T>::MidElement(Node* head)
+{
+	if (!head || !head->next) return head;
+	Node* thead, * thead2, * ppos = nullptr; // ppos is last node, node before mid
+
+	thead = thead2 = head;
+	while (thead2 && thead2->next)
+	{
+		ppos = thead;
+		thead = thead->next;
+		thead2 = thead2->next->next;
+	}
+
+	if (ppos)
+		ppos->next = nullptr;
+	return thead;
+}
+template<class T>
+class List<T>::Node* List<T>::MergeSort(Node* head)
+{
+	if (!head || !head->next) return head;
+	Node* mid = MidElement(head), * left = MergeSort(head), * right = MergeSort(mid);
+
+	return Merge(left, right);
+}
+template<class T>
+void List<T>::Sort()
+{
+	if (!head || !cmp) return;
+	head = MergeSort(head);
+
+	Node* thead = head;
+	Node* ppos = head;
+	while (thead)
+	{
+		ppos = thead;
+		thead = thead->next;
+	}
+	tail = ppos; // reassign tail to point to new last element
+}
+template<class T>
+bool List<T>::IsSorted() const
+{
+	if (!cmp) return false;
+
+	Node* thead = head;
+	while (thead && thead->next)
+	{
+		if (!cmp(thead,thead->next))
+			return false;
+		thead = thead->next;
+	}
 	return true;
 }
