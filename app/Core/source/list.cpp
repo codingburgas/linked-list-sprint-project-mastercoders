@@ -25,21 +25,6 @@ bool ListEvent::InsertDate(const EventData& data)
 	}
 	return InsertPos(ppos, data); // if pos is not first or list is not empty, insert using insert pos
 }
-bool ListEvent::ReplaceEvent(int pos, const EventData& data) const
-{
-	if (pos <= 0 || pos > count) return false; // if pos is not valid, return
-	
-	Node* thead = head;
-	for (int i = 0; thead && i < pos - 1; i++)
-	{
-		thead = thead->next;
-	}
-
-	if (!thead) return false; // if node at pos doesn't exist, return
-
-	thead->data = data;
-	return true;
-}
 bool ListEvent::SearchEvent(int year, const std::string& topic) const
 {
 	if (!head) return false;

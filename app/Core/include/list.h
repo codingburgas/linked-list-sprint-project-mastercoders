@@ -52,6 +52,8 @@ public:
 	{
 		return Get(pos);
 	}
+	// replace data at certain pos
+	bool Replace(int pos, const T& data) const;
 	// return whether list is empty or not
 	bool IsEmpty() const { return !head; }
 };
@@ -68,8 +70,6 @@ public:
 	bool InsertDate(const EventData& data);
 	// print all events: name,topic,year
 	void PrintEvent() const;
-	// replace event data at certain pos
-	bool ReplaceEvent(int pos, const EventData& data) const;
 	// search an event by year and topic, return true if found
 	bool SearchEvent(int year, const std::string& topic) const;
 
@@ -275,5 +275,21 @@ bool List<T>::DelAll()
 	}
 
 	count = 0;
+	return true;
+}
+template<class T>
+bool List<T>::Replace(int pos, const T& data) const
+{
+	if (pos <= 0 || pos > count) return false; // if pos is not valid, return
+
+	Node* thead = head;
+	for (int i = 0; thead && i < pos - 1; i++)
+	{
+		thead = thead->next;
+	}
+
+	if (!thead) return false; // if node at pos doesn't exist, return
+
+	thead->data = data;
 	return true;
 }

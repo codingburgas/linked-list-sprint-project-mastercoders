@@ -45,7 +45,7 @@ namespace Options
 		std::cout << "Enter new event's data:\n";
 		Utils::EnterEventData(data);
 
-		events->ReplaceEvent(std::stoi(num), data); // replace event after inserting its data
+		events->Replace(std::stoi(num), data); // replace event after inserting its data
 		if (!events->IsSorted())
 		{
 			events->SortEvents(); // if events are not sorted after replacement, sort
